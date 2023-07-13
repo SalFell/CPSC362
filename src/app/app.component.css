@@ -7,7 +7,8 @@
 .four-col .col2,
 .four-col .col3,
 .four-col .col4 {
-  width: 27%;
+  width: 22%;
+  margin: 8px;
 }
 
 .four-col .col1 {
@@ -23,9 +24,11 @@
 }
 
 .four-col .col4 {
-  float: right;
+  float: left;
+  position: absolute;
+  top: 8px;
 }
 
 .four-col label {
-  display: block;
+  display: inline-block;
 }
