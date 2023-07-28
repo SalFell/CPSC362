@@ -8,7 +8,7 @@ const ctx = document.getElementById('myChart');
 const data = await readJSON();
 
 // Create chart using an array
-export function createChart(data) {
+export function createChart() {
     const myChart = new Chart(
         ctx,
         {
