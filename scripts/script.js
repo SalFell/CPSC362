@@ -5,7 +5,6 @@ import { updateChart } from "./update-chart.js";
 
 
 // Retrieve data using the file ../data.json
-const data = await readJSON();
 
 // On Click Functions
 // 

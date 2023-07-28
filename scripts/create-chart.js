@@ -1,6 +1,11 @@
 
+import { readJSON } from "./read-json.js";
+
 // Canvas on which chart is created
 const ctx = document.getElementById('myChart');
+
+// Read JSON data
+const data = await readJSON();
 
 // Create chart using an array
 export function createChart(data) {
