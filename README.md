@@ -1,4 +1,4 @@
-#trAIder
+# trAIder
 
 ETF trading strategy analyzer based on Yahoo Finance data.
 
