@@ -1,13 +1,44 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        
+        <meta charset="UTF-8">
+
+        <title>trAIder</title>
+
+        <!-- Style Links -->
+        <link href="https://fonts.cdnfonts.com/css/century-schoolbook" rel="stylesheet">
+        <link rel="stylesheet" href="./static/style.css">
+
+        <!-- API Links -->
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.min.js"></script>
+        <!-- Yahoo Finance -->
+
+        <link rel="shortcut icon" href="#" />
+    </head>
+
+    <body>
+        <!-- welcome to trAIder header and Credits -->
+        <div class="welcome-header">
+            <p>welcome to</p>
+            <p id="welcome-trAIder">trAIder</p>
+        </class>
+        </div>
+        <div class="credits">
+            <p>Mike Ball | Salvador Felipe | Christian Mendez | Gilberto Espino Solis | Nick Viste</p>
+        </div>
+
+        <!-- Chart -->
+        <div style="width: 800px; height: 400px;">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <!-- Button -->
+        <button id="create-chart">Create Chart</button>
+        <button id="create-chart">Update Chart</button>
+        
+        <!-- Run script.js -->
+        <script type="module" src="scripts/script.js"></script>
+    </body>
 </html>
