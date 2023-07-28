@@ -8,7 +8,7 @@ So far with this and other test I've been doing the past few weeks I've tried to
 
 Because of this, you should be able to just clone this repo and run `npx http-server`, then use chrome to navigate to one of the urls it's available on as reported in the terminal under "Available On:". No other packages or dependencies required, ideally at least.
 
-Note: In some cases I've had to hard refresh the page (ctrl+F5) if changes aren't being made due to cached files. Mostly for when I was changing data.json to test if it updated the chart, but just in case you need this info.
+Note: In some cases I've had to hard refresh the page (`ctrl+F5`) if changes aren't being made due to cached files. Mostly for when I was changing data.json to test if it updated the chart, but just in case you need this info.
 
 # Completed
 Below are some things I got done with what's here. It's not much but it ~~mostly~~ works.
