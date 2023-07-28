@@ -7,6 +7,12 @@ const ctx = document.getElementById('myChart');
 // Read JSON data
 const data = await readJSON();
 
+// Change button to say "Update Chart"
+function changeText() {
+    var button = document.getElementById("chart-button");
+    if (button.innerHTML == 'Create Chart') button.innerHTML = 'Update Chart';
+}
+
 // Create chart using an array
 export function createChart() {
     const myChart = new Chart(
@@ -30,6 +36,9 @@ export function createChart() {
         }
         }
     );
+
+    changeText();
+    
     return myChart;
 }
 

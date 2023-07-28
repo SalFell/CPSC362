@@ -47,7 +47,7 @@ body {
 }
 
 /* Button Styles */
-#click-me {
+#chart-button {
     opacity: 0%;
     animation-name: fadeIn;
     animation-duration: 1s;
