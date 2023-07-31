@@ -45,7 +45,7 @@ body {
     margin-top: 3%;
 }
 
-.inputContainer {
+.input-container {
     opacity: 0%;
     animation-name: fadeIn;
     animation-duration: 1s;
