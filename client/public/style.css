@@ -1,0 +1,63 @@
+/* Constants */
+:root {
+    --fadeTime: 2s;
+}
+
+/* General Styles */
+html {
+    font-family: 'Century Schoolbook', serif;
+}
+
+body {
+    background-image: linear-gradient(#2A2E38, #434343);
+    background-attachment: fixed;
+
+    margin-left: 7%;
+}
+
+/* Header and Credit Styles */
+.welcome-header {
+    font-size: 32px;
+    font-weight: 100;
+    margin-top: 5%;
+    color: white;
+    animation: fadeIn var(--fadeTime);
+}
+#welcome-trAIder {
+    font-size: 100px;
+    margin-top: 3%;
+    line-height: 0px;
+}
+.credits {
+    font-size: 14px;
+    color:rgba(255, 255, 255, 0.158);
+
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    opacity: 0%;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+    margin-top: 3%;
+
+}
+
+/* Button Styles */
+#chart-button {
+    opacity: 0%;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+    margin-top: 3%;
+} 
+
+/* Animation */
+@keyframes fadeIn {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
