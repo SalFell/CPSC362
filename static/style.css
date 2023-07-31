@@ -28,7 +28,8 @@ body {
     margin-top: 3%;
     line-height: 0px;
 }
-.credits {
+
+#credits {
     font-size: 14px;
     color:rgba(255, 255, 255, 0.158);
 

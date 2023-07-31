@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
-        <!-- Metadata and Title -->
+        
         <meta charset="UTF-8">
+
         <title>trAIder</title>
 
         <!-- Style Links -->
@@ -14,7 +15,7 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.min.js"></script>
         <!-- Yahoo Finance -->
 
-        <!-- Favicon Error Fix -->
+        <!-- Favicon Fix -->
         <link rel="shortcut icon" href="#" />
     </head>
 
@@ -25,7 +26,7 @@
             <p id="welcome-trAIder">trAIder</p>
         </class>
         </div>
-        <div class="credits">
+        <div id="credits">
             <p>Mike Ball | Salvador Felipe | Christian Mendez | Gilberto Espino Solis | Nick Viste</p>
         </div>
 
@@ -35,9 +36,11 @@
         </div>
 
         <!-- Button -->
-        <button id="chart-button">Update Chart</button>
+        <button id="chart-button">Create Chart</button>
         
-        <!-- Run script.js -->
+        <!-- Scripts -->
+        <script src="scripts/createChart.js"></script>
+        <script src="scripts/updateChart.js"></script>
         <script src="scripts/script.js"></script>
     </body>
 </html>
