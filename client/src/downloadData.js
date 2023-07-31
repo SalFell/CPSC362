@@ -1,10 +1,13 @@
 // src/DataDownloadForm.js
 
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import Chart from 'chart.js';
+import Chart from 'chart.js/auto';
 
 const DataDownloadForm = () => {
+  const [historicalData, setHistoricalData] = useState([]);
+  const [showTable, setShowTable] = useState(false);
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const symbol = event.target.symbol.value;
@@ -22,6 +25,8 @@ const DataDownloadForm = () => {
       const historicalData = processData(data);
 
       if (historicalData.length > 0) {
+        setHistoricalData(historicalData);
+        setShowTable(true);
         generateGraph(historicalData);
         downloadDataAsJson(historicalData, symbol);
       } else {
@@ -117,6 +122,7 @@ const DataDownloadForm = () => {
   };
 
   return (
+    <div>
     <form id="dataForm" onSubmit={handleFormSubmit}>
        <label for="symbol">ETF Symbol</label>
        <input type="text" id="symbol" name="symbol" placeholder="FNGD" required />
@@ -127,6 +133,38 @@ const DataDownloadForm = () => {
        <button type="submit">Download data</button>
        <canvas id="priceChart"></canvas>
     </form>
+
+    {showTable && historicalData.length > 0 && (
+        <div className="table-container">
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Open</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Close</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody>
+              {historicalData.map((item) => (
+                <tr key={item.Date}>
+                  <td>{item.Date}</td>
+                  <td>{item.Open}</td>
+                  <td>{item.High}</td>
+                  <td>{item.Low}</td>
+                  <td>{item.Close}</td>
+                  <td>{item.Volume}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      <canvas id="priceChart"></canvas>
+    </div>
   );
 };
 

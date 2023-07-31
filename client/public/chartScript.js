@@ -1,3 +1,4 @@
+const { Chart } = await import('chart.js');
 
 // Update the chart with new data from data.json
 function updateChart() {
@@ -65,7 +66,7 @@ const config = {
 
 // Render init block
 const myChart = new Chart(
-    document.getElementById('myChart'), 
+    document.getElementById('myChart'),
     config
 );
 
