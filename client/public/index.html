@@ -43,8 +43,17 @@
      <p>Welcome to</p>
      <p id="welcome-trAIder">trAIder</p>
     </div>
-    <div class="credits">
-     <p>Mike Ball | Salvador Felipe | Christian Mendez | Gilberto Espino Solis | Nick Viste</p>
+    <!--Ask for ETF symbol, start date, and end date-->
+    <div class="input-container">
+      <form id="dataForm">
+        <label for="symbol">ETF Symbol</label>
+        <input type="text" id="symbol" name="symbol" placeholder="FNGD" required>
+        <label for="start-date">Start Date</label>
+        <input type="date" id="startDate" name="start-date" required>
+        <label for="end-date">End Date</label>
+        <input type="date" id="endDate" name="end-date" required>
+        <button type="submit">Download data</button>
+      </form>
     </div>
 
     <!-- Chart -->
@@ -57,5 +66,10 @@
      
     <!-- Run script.js -->
     <script src="%PUBLIC_URL%/chartScript.js"></script>
+
+    
+    <div class="credits">
+      <p>Mike Ball | Salvador Felipe | Christian Mendez | Gilberto Espino Solis | Nick Viste</p>
+     </div>
   </body>
 </html>
