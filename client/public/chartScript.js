@@ -1,4 +1,4 @@
-const { Chart } = await import('chart.js');
+// const { Chart } = await import('chart.js');
 
 // Update the chart with new data from data.json
 function updateChart() {

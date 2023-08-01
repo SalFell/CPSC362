@@ -15,17 +15,15 @@ const DataDownloadForm = () => {
     event.preventDefault();
 
     try {
+      // window.alert('arguments:' + symbol + startDate + endDate);
       const response = await axios.get(
-        `https://query1.finance.yahoo.com/v7/finance/chart/${symbol}?period1=${new Date(
-          startDate
-        ).getTime() / 1000}&period2=${new Date(endDate).getTime() / 1000}&interval=1d&events=history&includeAdjustedClose=true`
+        `http://localhost:3001/yahoo-finance/${symbol}?period1=${new Date(startDate).getTime() / 1000}&period2=${new Date(endDate).getTime() / 1000}&interval=1d&events=history&includeAdjustedClose=true`
       );
 
       const data = response.data;
       const historicalData = processData(data);
 
       if (historicalData.length > 0) {
-        window.alert('Data downloaded successfully!');
         setHistoricalData(historicalData);
         setShowTable(true);
         generateGraph(historicalData);
@@ -34,7 +32,8 @@ const DataDownloadForm = () => {
         window.alert('No data received from Yahoo Finance API.');
       }
     } catch (error) {
-      window.alert('Error occurred while downloading data:', error.message, symbol, startDate, endDate);
+      console.error('Error occurred while downloading data:' + error.message + symbol + startDate + endDate);
+      window.alert('Error occurred during data download. Please try again.');
     }
   };
 
@@ -120,12 +119,14 @@ const DataDownloadForm = () => {
     document.body.removeChild(a);
 
     window.alert(`Data for ${symbol} downloaded successfully to ${fileName}`);
+    URL.revokeObjectURL(url);
   };
   return (
     <div>
-    <form id="dataForm" onChange={handleFormSubmit}>
+    <form id="dataForm" onSubmit ={handleFormSubmit}>
         <label htmlFor="symbol">ETF symbol:</label>
-        <select id="symbol" value={symbol} onChange={(e) => setSymbol(e.target.value)} required>
+        <select id="symbol" onChange={(e) => setSymbol(e.target.value)} required>
+          <option value="">Please select</option>
           <option value="FNGD">FNGD</option>
           <option value="FNGU">FNGU</option>
         </select>
@@ -133,7 +134,7 @@ const DataDownloadForm = () => {
         <input
           type="date"
           id="startDate"
-          min="2021-01-01"
+          min="2020-01-01"
           value={startDate}
           onChange={(e) => setStartDate(e.target.value)}
           required
@@ -146,6 +147,7 @@ const DataDownloadForm = () => {
           onChange={(e) => setEndDate(e.target.value)}
           required
         />
+        <button type="submit">Download</button>
       </form>
 
     {showTable && historicalData.length > 0 && (
