@@ -147,7 +147,7 @@ const DataDownloadForm = () => {
           onChange={(e) => setEndDate(e.target.value)}
           required
         />
-        <button type="submit">Download</button>
+        <button id="submitButton" type="submit">Download</button>
       </form>
 
     {showTable && historicalData.length > 0 && (

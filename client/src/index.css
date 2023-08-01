@@ -1,12 +1,11 @@
 /* Constants */
 :root {
   --fadeTime: 2s;
-  --delayTime: 1.5s;
+  --delayTime: 1s;
 }
 
 /* General Styles */
 html {
-  font-family: 'Century Schoolbook', serif;
   color:white;
 }
 
@@ -19,6 +18,7 @@ body {
 
 /* Header and Credit Styles */
 .welcome-header {
+  font-family: 'Century Schoolbook', serif;
   font-size: 32px;
   font-weight: 100;
   margin-top: 5%;
@@ -37,27 +37,47 @@ body {
   right: 5%;
 
   margin-top: 0%;
-  
+
   animation: fadeIn var(--fadeTime);
 }
 
-.input-container {
+#dataForm{
   opacity: 0%;
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-delay: var(--delayTime);
   animation-fill-mode: forwards;
-  
 
   margin-top: -1%;
   margin-bottom: 1%;
+  margin-right: 20px;
+
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#symbol, #startDate, #endDate, #submitButton  {
+  margin-left: .75%;
+  margin-right: .75%;
+  vertical-align: middle;
+}
+
+.table-container {
+  font-size: 20px;
+  table-layout: fixed;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+th, td{
+  width: 12%; 
+  text-align: center;
 }
 
 /* Button Styles */
 #chart-button {
   opacity: 0%;
   animation-name: fadeIn;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-delay: var(--delayTime);
   animation-fill-mode: forwards;
 
