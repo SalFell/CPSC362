@@ -7,12 +7,12 @@ import Chart from 'chart.js/auto';
 const DataDownloadForm = () => {
   const [historicalData, setHistoricalData] = useState([]);
   const [showTable, setShowTable] = useState(false);
+  const [symbol, setSymbol] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    const symbol = event.target.symbol.value;
-    const startDate = event.target.startDate.value;
-    const endDate = event.target.endDate.value;
 
     try {
       const response = await axios.get(
@@ -25,15 +25,16 @@ const DataDownloadForm = () => {
       const historicalData = processData(data);
 
       if (historicalData.length > 0) {
+        window.alert('Data downloaded successfully!');
         setHistoricalData(historicalData);
         setShowTable(true);
         generateGraph(historicalData);
         downloadDataAsJson(historicalData, symbol);
       } else {
-        console.error('No data received from Yahoo Finance API.');
+        window.alert('No data received from Yahoo Finance API.');
       }
     } catch (error) {
-      console.error('Error occurred while downloading data:', error.message);
+      window.alert('Error occurred while downloading data:', error.message, symbol, startDate, endDate);
     }
   };
 
@@ -58,7 +59,7 @@ const DataDownloadForm = () => {
         Volume: quotes.volume[index],
       }));
     } else {
-      console.error('No historical price data received from Yahoo Finance API.');
+      window.alert('No historical price data received from Yahoo Finance API.');
       return [];
     }
   };
@@ -118,21 +119,34 @@ const DataDownloadForm = () => {
     a.click();
     document.body.removeChild(a);
 
-    console.log(`Data for ${symbol} downloaded successfully to ${fileName}`);
+    window.alert(`Data for ${symbol} downloaded successfully to ${fileName}`);
   };
-
   return (
     <div>
-    <form id="dataForm" onSubmit={handleFormSubmit}>
-       <label for="symbol">ETF Symbol</label>
-       <input type="text" id="symbol" name="symbol" placeholder="FNGD" required />
-       <label for="start-date">Start Date</label>
-       <input type="date" id="start-date" name="start-date" required />
-       <label for="end-date">End Date</label>
-       <input type="date" id="end-date" name="end-date" required />
-       <button type="submit">Download data</button>
-       <canvas id="priceChart"></canvas>
-    </form>
+    <form id="dataForm" onChange={handleFormSubmit}>
+        <label htmlFor="symbol">ETF symbol:</label>
+        <select id="symbol" value={symbol} onChange={(e) => setSymbol(e.target.value)} required>
+          <option value="FNGD">FNGD</option>
+          <option value="FNGU">FNGU</option>
+        </select>
+        <label htmlFor="startDate">Start Date:</label>
+        <input
+          type="date"
+          id="startDate"
+          min="2021-01-01"
+          value={startDate}
+          onChange={(e) => setStartDate(e.target.value)}
+          required
+        />
+        <label htmlFor="endDate">End Date:</label>
+        <input
+          type="date"
+          id="endDate"
+          value={endDate}
+          onChange={(e) => setEndDate(e.target.value)}
+          required
+        />
+      </form>
 
     {showTable && historicalData.length > 0 && (
         <div className="table-container">
