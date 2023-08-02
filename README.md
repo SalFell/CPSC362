@@ -1,5 +1,3 @@
 # trAIder
 
-ETF trading strategy analyzer based on Yahoo Finance data.
-
-Built with Node.js and React
+Cleaned up Sal's repo after reading through some React documentation and started to put files in MVC structure. Haven't done much yet but might make it easier to understand what's going on and implement other functions.
