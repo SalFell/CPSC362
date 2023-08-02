@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import generateGraph from './chartScript';
+import { generateGraph } from './chartScript';
 
 const DataDownloadForm = () => {
   const [historicalData, setHistoricalData] = useState([]);
@@ -26,7 +26,6 @@ const DataDownloadForm = () => {
     });
 
       const data = response.data;
-      // const historicalData = processData(data);
 
       if (data.length > 0) {
         window.alert('Data downloaded successfully.');

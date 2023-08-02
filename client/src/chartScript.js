@@ -1,11 +1,20 @@
 // chartUtils.js
+
 import Chart from 'chart.js/auto';
 
-const generateGraph = (historicalData) => {
+export function generateGraph(historicalData) {
   const dates = historicalData.map((item) => item.Date);
   const prices = historicalData.map((item) => item.Close);
 
-  const ctx = document.getElementById('priceChart').getContext('2d');
+  const ctx = document.getElementById('priceChart');
+
+  // Destroy the previous Chart instance if it exists
+  const existingChart = Chart.getChart(ctx);
+  if (existingChart) {
+    existingChart.destroy();
+  }
+
+  // Create a new Chart instance
   new Chart(ctx, {
     type: 'line',
     data: {
@@ -40,6 +49,4 @@ const generateGraph = (historicalData) => {
       },
     },
   });
-};
-
-export default generateGraph;
+}
