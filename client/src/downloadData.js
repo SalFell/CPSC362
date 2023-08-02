@@ -150,6 +150,10 @@ const DataDownloadForm = () => {
         <button id="submitButton" type="submit">Download</button>
       </form>
 
+      <div id = "priceChart-container">
+        <canvas id="priceChart"></canvas>
+      </div>
+      
     {showTable && historicalData.length > 0 && (
         <div className="table-container">
           <table className="data-table">
@@ -178,9 +182,6 @@ const DataDownloadForm = () => {
           </table>
         </div>
       )}
-      <div id = "priceChart-container">
-        <canvas id="priceChart"></canvas>
-      </div>
     </div>
   );
 };
