@@ -118,7 +118,7 @@ function MACOmain(filename) {
 }
 // Run the main function
 // if (require.main === module) {
-//   MACOmain();
+   MACOmain();
 // }
 
 module.exports = MACOmain;
