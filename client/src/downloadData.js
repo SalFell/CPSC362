@@ -76,7 +76,7 @@ const DataDownloadForm = () => {
           {
             label: 'Closing Price',
             data: prices,
-            borderColor: 'blue',
+            borderColor: 'white',
             borderWidth: 1,
             fill: false,
           },
