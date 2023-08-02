@@ -178,8 +178,9 @@ const DataDownloadForm = () => {
           </table>
         </div>
       )}
-
-      <canvas id="priceChart"></canvas>
+      <div id = "priceChart-container">
+        <canvas id="priceChart"></canvas>
+      </div>
     </div>
   );
 };
