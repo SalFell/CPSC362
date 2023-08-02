@@ -192,7 +192,7 @@ function BBmain(filename) {
 
   // Write the trades to a JSON file
   JSON_Trades = JSON.stringify(trades);
-  fs.writeFile("MACO.json", JSON_Trades, function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
+  fs.writeFile("./data/MACO.json", JSON_Trades, function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
     if (err) {
       console.error('Error writing to file:', err);
     } else {
@@ -202,7 +202,7 @@ function BBmain(filename) {
 
   // Write the trades to a JSON file
   BB_Trades = JSON.stringify(BBresults);
-  fs.writeFile("BB.json", BB_Trades, function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
+  fs.writeFile("./data/BB.json", BB_Trades, function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
     if (err) {
       console.error('Error writing to file:', err);
     } else {

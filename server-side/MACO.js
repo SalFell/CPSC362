@@ -108,7 +108,7 @@ function MACOmain(filename) {
 
   // Write the trades to a JSON file
   let JSON_Trades = JSON.stringify(trades, null, 2);
-  fs.writeFile("MACO.json", JSON_Trades, function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
+  fs.writeFile("./data/MACO.json", JSON_Trades, function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
     if (err) {
       console.error('Error writing to file:', err);
     } else {

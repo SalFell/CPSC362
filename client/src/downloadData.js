@@ -42,7 +42,7 @@ const DataDownloadForm = () => {
   };
 
   return (
-    <div>
+    <div className="data-download-form" data-testid="data-download-form">
     <form id="dataForm" onSubmit ={handleFormSubmit}>
         <label htmlFor="symbol">ETF symbol:</label>
         <select id="symbol" onChange={(e) => setSymbol(e.target.value)} required>
