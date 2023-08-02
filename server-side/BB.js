@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // Function to read the JSON file and parse its content
-function readHistoricalDataFile(filename) {
+const readHistoricalDataFile = (filename) => {
   const data = fs.readFileSync(filename);
   return JSON.parse(data);
 }
@@ -167,7 +167,7 @@ function simulateTrades(data) {
 
 
 // Main function to run the program
-export function BBmain(filename) {
+function BBmain(filename) {
   const data = readHistoricalDataFile(filename);
   const BBresults = runTradingStrategy(data);
   const trades = simulateTrades(data);
@@ -213,4 +213,6 @@ export function BBmain(filename) {
 }
 
 // Run the main function
-main();
+// BBmain(filename);
+
+module.exports = BBmain;

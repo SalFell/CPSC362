@@ -1,6 +1,6 @@
-import React from 'react';
+const React = require('react'); // Use require for CommonJS modules
 
-const BackTestResults = ({ results }) => {
+function BackTestResults({ results }) {
   // Implement how you want to display the back-test results here
   return (
     <div>
@@ -29,6 +29,6 @@ const BackTestResults = ({ results }) => {
       </table>
     </div>
   );
-};
+}
 
-export default BackTestResults;
+module.exports = BackTestResults; // Export the component

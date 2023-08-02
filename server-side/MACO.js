@@ -11,7 +11,7 @@ const readHistoricalDataFile = (filename) =>{
 const simulateTrades = (data) => {
 
  if (data.length < 20) {
-  console.error('Insufficient data provided.');
+  window.alert('Insufficient data provided.');
   return [];
 }
 
@@ -92,7 +92,7 @@ const simulateTrades = (data) => {
 }
 
 // Main function to run the program
-export function MACOmain(filename) {
+function MACOmain(filename) {
   const data = readHistoricalDataFile(filename);
   const trades = simulateTrades(data);
 
@@ -117,8 +117,8 @@ export function MACOmain(filename) {
   });
 }
 // Run the main function
-if (require.main === module) {
-  main();
-}
+// if (require.main === module) {
+//   MACOmain();
+// }
 
-module.exports = {simulateTrades, readHistoricalDataFile};
+module.exports = MACOmain;

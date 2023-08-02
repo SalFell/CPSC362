@@ -1,6 +1,6 @@
-import { MACOmain } from './MACO';
-import { BBmain } from './MACO2';
-import BackTestResults from './BackTestResults';
+const MACOmain = require('./MACO');
+const BBmain = require('./BB');
+//const { BackTestResults } = require('../client/src/BackTestResults');
 const express = require('express');
 const axios = require('axios');
 const fs = require('fs');
@@ -61,14 +61,15 @@ app.get('/yahoo-finance/:symbol', async (req, res) => {
 
     if (historicalData.length > 0) {
       // Save data to the server
-      const fileName = `data/${symbol}_historical_data.json`;
+      const fileName = `./data/${symbol}_historical_data.json`;
       fs.writeFileSync(fileName, JSON.stringify(historicalData, null, 2), 'utf8');
 
       // Backtest
-      const MACO = MACOmain(historicalData);
-      const BB = BBmain(historicalData);
-      const backTestResults = BackTestResults(historicalData, MACO, BB);
-      console.log(backTestResults);
+      const MACO = MACOmain(fileName);
+      console.log(MACO);
+      const BB = BBmain(fileName);
+      console.log(BB);
+      //BackTestResults(MACO);
       console.log(`Data for ${symbol} downloaded successfully to ${fileName}`);
 
       res.json(historicalData);
