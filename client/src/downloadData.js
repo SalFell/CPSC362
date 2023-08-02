@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import Chart from 'chart.js/auto';
+import generateGraph from './chartScript';
 
 const DataDownloadForm = () => {
   const [historicalData, setHistoricalData] = useState([]);
@@ -63,47 +63,6 @@ const DataDownloadForm = () => {
     }
   };
 
-  const generateGraph = (historicalData) => {
-    const dates = historicalData.map((item) => item.Date);
-    const prices = historicalData.map((item) => item.Close);
-
-    const ctx = document.getElementById('priceChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: dates,
-        datasets: [
-          {
-            label: 'Closing Price',
-            data: prices,
-            borderColor: 'white',
-            borderWidth: 1,
-            fill: false,
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        scales: {
-          x: {
-            display: true,
-            title: {
-              display: true,
-              text: 'Date',
-            },
-          },
-          y: {
-            display: true,
-            title: {
-              display: true,
-              text: 'Closing Price',
-            },
-          },
-        },
-      },
-    });
-  };
-
   const downloadDataAsJson = (data, symbol) => {
     const jsonData = JSON.stringify(data, null, 2);
     const fileName = `${symbol}_historical_data.json`;
@@ -150,6 +109,9 @@ const DataDownloadForm = () => {
         <button id="submitButton" type="submit">Download</button>
       </form>
 
+      <div id = "priceChart-container">
+        <canvas id="priceChart"></canvas>
+      </div>
     {showTable && historicalData.length > 0 && (
         <div className="table-container">
           <table className="data-table">
@@ -178,9 +140,8 @@ const DataDownloadForm = () => {
           </table>
         </div>
       )}
-      <div id = "priceChart-container">
-        <canvas id="priceChart"></canvas>
-      </div>
+
+      <canvas id="priceChart"></canvas>
     </div>
   );
 };
