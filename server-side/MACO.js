@@ -92,7 +92,7 @@ const simulateTrades = (data) => {
 }
 
 // Main function to run the program
-function MACOmain(filename) {
+function main(filename) {
   const data = readHistoricalDataFile(filename);
   const trades = simulateTrades(data);
 
@@ -118,7 +118,7 @@ function MACOmain(filename) {
 }
 // Run the main function
 // if (require.main === module) {
-   MACOmain();
+   main('data/FNGD_historical_data.json');
 // }
 
-module.exports = MACOmain;
+module.exports = main;
