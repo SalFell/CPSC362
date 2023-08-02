@@ -15,19 +15,24 @@ const DataDownloadForm = () => {
     event.preventDefault();
 
     try {
-      // window.alert('arguments:' + symbol + startDate + endDate);
-      const response = await axios.get(
-        `http://localhost:3001/yahoo-finance/${symbol}?period1=${new Date(startDate).getTime() / 1000}&period2=${new Date(endDate).getTime() / 1000}&interval=1d&events=history&includeAdjustedClose=true`
-      );
+      const response = await axios.get(`http://localhost:3001/yahoo-finance/${symbol}`, {
+      params: {
+        period1: new Date(startDate).getTime() / 1000,
+        period2: new Date(endDate).getTime() / 1000,
+        interval: '1d',
+        events: 'history',
+        includeAdjustedClose: true,
+      },
+    });
 
       const data = response.data;
-      const historicalData = processData(data);
+      // const historicalData = processData(data);
 
-      if (historicalData.length > 0) {
-        setHistoricalData(historicalData);
+      if (data.length > 0) {
+        window.alert('Data downloaded successfully.');
+        setHistoricalData(data);
         setShowTable(true);
-        generateGraph(historicalData);
-        downloadDataAsJson(historicalData, symbol);
+        generateGraph(data);
       } else {
         window.alert('No data received from Yahoo Finance API.');
       }
@@ -37,49 +42,6 @@ const DataDownloadForm = () => {
     }
   };
 
-  const processData = (data) => {
-    if (
-      data.chart &&
-      data.chart.result &&
-      data.chart.result[0].timestamp &&
-      data.chart.result[0].indicators &&
-      data.chart.result[0].indicators.quote &&
-      data.chart.result[0].indicators.quote[0]
-    ) {
-      const timestamps = data.chart.result[0].timestamp;
-      const quotes = data.chart.result[0].indicators.quote[0];
-
-      return timestamps.map((timestamp, index) => ({
-        Date: new Date(timestamp * 1000).toISOString().split('T')[0],
-        Open: quotes.open[index],
-        High: quotes.high[index],
-        Low: quotes.low[index],
-        Close: quotes.close[index],
-        Volume: quotes.volume[index],
-      }));
-    } else {
-      window.alert('No historical price data received from Yahoo Finance API.');
-      return [];
-    }
-  };
-
-  const downloadDataAsJson = (data, symbol) => {
-    const jsonData = JSON.stringify(data, null, 2);
-    const fileName = `${symbol}_historical_data.json`;
-
-    const blob = new Blob([jsonData], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = fileName;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-
-    window.alert(`Data for ${symbol} downloaded successfully to ${fileName}`);
-    URL.revokeObjectURL(url);
-  };
   return (
     <div>
     <form id="dataForm" onSubmit ={handleFormSubmit}>

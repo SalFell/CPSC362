@@ -1,6 +1,8 @@
 const express = require('express');
 const axios = require('axios');
+const fs = require('fs');
 const cors = require('cors');
+
 const app = express();
 const port = 3001; // You can choose any available port number
 
@@ -14,6 +16,34 @@ res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Ty
 next();
 })
 
+app.use(express.json());
+
+function processData(data) {
+    if (
+      data.chart &&
+      data.chart.result &&
+      data.chart.result[0].timestamp &&
+      data.chart.result[0].indicators &&
+      data.chart.result[0].indicators.quote &&
+      data.chart.result[0].indicators.quote[0]
+    ) {
+      const timestamps = data.chart.result[0].timestamp;
+      const quotes = data.chart.result[0].indicators.quote[0];
+
+      return timestamps.map((timestamp, index) => ({
+        Date: new Date(timestamp * 1000).toISOString().split('T')[0],
+        Open: quotes.open[index],
+        High: quotes.high[index],
+        Low: quotes.low[index],
+        Close: quotes.close[index],
+        Volume: quotes.volume[index],
+      }));
+    } else {
+      window.alert('No historical price data received from Yahoo Finance API.');
+      return [];
+    }
+};
+
 // Endpoint to proxy the Yahoo Finance API request
 app.get('/yahoo-finance/:symbol', async (req, res) => {
   const symbol = req.params.symbol;
@@ -23,8 +53,19 @@ app.get('/yahoo-finance/:symbol', async (req, res) => {
     const response = await axios.get(
       `http://query1.finance.yahoo.com/v7/finance/chart/${symbol}?period1=${period1}&period2=${period2}&interval=${interval}&events=${events}&includeAdjustedClose=${includeAdjustedClose}`
     );
+    const data = response.data;
+    const historicalData = processData(data);
 
-    res.json(response.data);
+    if (historicalData.length > 0) {
+      // Save data to the server
+      const fileName = `data/${symbol}_historical_data.json`;
+      fs.writeFileSync(fileName, JSON.stringify(historicalData, null, 2), 'utf8');
+      console.log(`Data for ${symbol} downloaded successfully to ${fileName}`);
+
+      res.json(historicalData);
+    } else {
+      res.status(404).json({ error: 'No data received from Yahoo Finance API.' });
+    }
   } catch (error) {
     console.error('Error occurred during API request:', error.message);
     res.status(500).json({ error: 'Internal server error' });
