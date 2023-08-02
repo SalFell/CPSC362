@@ -74,6 +74,8 @@ body {
   table-layout: fixed;
   margin-top: 2%;
   margin-bottom: 2%;
+
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 th, td{
