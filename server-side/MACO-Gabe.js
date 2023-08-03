@@ -1,19 +1,14 @@
 const fs = require('fs');
 
 // Function to read the JSON file and parse its content
-const readHistoricalDataFile = (filename) =>{
+function readHistoricalDataFile(filename) {
   const data = fs.readFileSync(filename);
   return JSON.parse(data);
 }
 
 
-// Function to simulate trades based on the "Open" data
-const simulateTrades = (data) => {
-
- if (data.length < 20) {
-  window.alert('Insufficient data provided.');
-  return [];
-}
+// Function to simulate trades based on the "Close" data
+function simulateTrades(data) {
 
   //when the days price goes above or below the moving average, buy or sell
   //first generate moving average, then compare to price
@@ -22,24 +17,43 @@ const simulateTrades = (data) => {
   let cashForTrade = 90000
   let stockAmount = 0;
   let sum = 0;
-  let movingAverage = 0;
+  let movingAverage;
+  let lookbackPeriod = 20; //20 day moving average
 
   for(let i = 0; i < 19; i++)
   {
-    sum += data[i].Open;
+    sum += data[i].Close;
   }
-  movingAverage = sum/20;
-  stockAmount = cashForTrade/data[19].Open;
+  movingAverage = sum/lookbackPeriod;
+  sum = 0;
+  stockAmount = cashForTrade/data[lookbackPeriod].Close;
 
   //all trades will be $10,000
-  for (let i = 20; i < data.length - 1; i++) {
-    let previousMovingAverage = movingAverage;
-    movingAverage = (movingAverage*20 - data[i-20].Open + data[i].Open)/20;
+  for (let i = lookbackPeriod; i < data.length - 1; i++) {
 
-    if(data[i].Open > movingAverage && data[i-1].Open < previousMovingAverage)
+
+    previousMovingAverage = movingAverage;
+
+    //Add past lookbackperiod number of days of prices
+    for(let j = i - 19; j <= i; j++){
+      sum += data[j].Close;
+    }
+    //Divide that by the lookbackperiod
+    movingAverage = sum/lookbackPeriod;
+    sum = 0;
+
+    //movingAverage = (movingAverage*lookbackPeriod - data[i-lookbackPeriod].Close + data[i].Close)/20;
+    console.log("Moving Average:");
+    console.log(movingAverage);
+    console.log("Close Price:");
+    console.log(data[i].Close);
+
+    console.log(data[i].Date);
+
+    if(data[i].Close > movingAverage && data[i-1].Close < previousMovingAverage)
     {
       //buy
-      const price = data[i].Open;
+      const price = data[i].Close;
       const date = new Date(data[i].Date);
       if(cashReserve > 0)
       {
@@ -55,16 +69,16 @@ const simulateTrades = (data) => {
         DateOfTrade: date.toISOString(),
         Price: price,
         TradeType: "Buy",
-        CashReserve: cashReserve.toFixed(2),
-        StockAmount: stockAmount.toFixed(2),
-        MoneyInStock: (stockAmount*price).toFixed(2),
-        TotalInPortfolio: (cashReserve + stockAmount*price).toFixed(2),
+        CashReserve: cashReserve,
+        StockAmount: stockAmount,
+        MoneyInStock: (stockAmount*price),
+        TotalInPortfolio: (cashReserve + stockAmount*price),
       });
     }
-    else if (data[i].Open < movingAverage && data[i-1].Open > previousMovingAverage)
+    else if (data[i].Close < movingAverage && data[i-1].Close > previousMovingAverage)
     {
       //sell
-      const price = data[i].Open;
+      const price = data[i].Close;
       const date = new Date(data[i].Date);
       if(stockAmount > 0)
       {
@@ -80,19 +94,21 @@ const simulateTrades = (data) => {
         DateOfTrade: date.toISOString(),
         Price: price,
         TradeType: "Sell",
-        CashReserve: cashReserve.toFixed(2),
-        StockAmount: stockAmount.toFixed(2),
-        MoneyInStock: (stockAmount*price).toFixed(2),
-        TotalInPortfolio: (cashReserve + stockAmount*price).toFixed(2),
+        CashReserve: cashReserve,
+        StockAmount: stockAmount,
+        MoneyInStock: (stockAmount*price),
+        TotalInPortfolio: (cashReserve + stockAmount*price),
       });
     }
 
   }
   return trades;
 }
+// module.exports = {simulateTrades, readHistoricalDataFile};
 
 // Main function to run the program
-function MACOmain(filename) {
+function MACOmain() {
+  const filename = 'data/FNGD_historical_data.json';
   const data = readHistoricalDataFile(filename);
   const trades = simulateTrades(data);
 
@@ -107,8 +123,8 @@ function MACOmain(filename) {
   console.log('------------------------------------------------');
 
   // Write the trades to a JSON file
-  let JSON_Trades = JSON.stringify(trades, null, 2);
-  fs.writeFile("./data/MACO.json", JSON_Trades, function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
+  JSON_Trades = JSON.stringify(trades, null, 2);
+  fs.writeFile("MACO.json", JSON_Trades, function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
     if (err) {
       console.error('Error writing to file:', err);
     } else {
@@ -117,8 +133,9 @@ function MACOmain(filename) {
   });
 }
 // Run the main function
-// if (require.main === module) {
-//   MACOmain();
-// }
+if (require.main === module) {
+  main();
+}
+
 
 module.exports = MACOmain;
