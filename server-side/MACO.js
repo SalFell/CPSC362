@@ -1,19 +1,18 @@
 const fs = require('fs');
 
 // Function to read the JSON file and parse its content
-const readHistoricalDataFile = (filename) =>{
+function readHistoricalDataFile(filename) {
   const data = fs.readFileSync(filename);
   return JSON.parse(data);
 }
 
 
 // Function to simulate trades based on the "Open" data
-const simulateTrades = (data) => {
+function simulateTrades(data) {
 
- if (data.length < 20) {
-  window.alert('Insufficient data provided.');
-  return [];
-}
+ // if (!Array.isArray(data) || data.length < 20) {
+ //   return [];
+//  }
 
   //when the days price goes above or below the moving average, buy or sell
   //first generate moving average, then compare to price
@@ -22,7 +21,7 @@ const simulateTrades = (data) => {
   let cashForTrade = 90000
   let stockAmount = 0;
   let sum = 0;
-  let movingAverage = 0;
+  let movingAverage;
 
   for(let i = 0; i < 19; i++)
   {
@@ -33,7 +32,7 @@ const simulateTrades = (data) => {
 
   //all trades will be $10,000
   for (let i = 20; i < data.length - 1; i++) {
-    let previousMovingAverage = movingAverage;
+    previousMovingAverage = movingAverage;
     movingAverage = (movingAverage*20 - data[i-20].Open + data[i].Open)/20;
 
     if(data[i].Open > movingAverage && data[i-1].Open < previousMovingAverage)
@@ -90,9 +89,11 @@ const simulateTrades = (data) => {
   }
   return trades;
 }
+module.exports = {simulateTrades, readHistoricalDataFile};
 
 // Main function to run the program
-function main(filename) {
+function main() {
+  const filename = 'data/FNGD_historical_data.json';
   const data = readHistoricalDataFile(filename);
   const trades = simulateTrades(data);
 
@@ -107,7 +108,7 @@ function main(filename) {
   console.log('------------------------------------------------');
 
   // Write the trades to a JSON file
-  let JSON_Trades = JSON.stringify(trades, null, 2);
+  JSON_Trades = JSON.stringify(trades, null, 2);
   fs.writeFile("MACO.json", JSON_Trades, function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
     if (err) {
       console.error('Error writing to file:', err);
@@ -117,8 +118,6 @@ function main(filename) {
   });
 }
 // Run the main function
-// if (require.main === module) {
-   main('data/FNGD_historical_data.json');
-// }
-
-module.exports = main;
+if (require.main === module) {
+  main();
+}
