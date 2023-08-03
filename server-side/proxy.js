@@ -66,9 +66,9 @@ app.get('/yahoo-finance/:symbol', async (req, res) => {
 
       // Backtest
       const MACO = MACOmain(fileName);
-      console.log(MACO);
+      // console.log(MACO);
       const BB = BBmain(fileName);
-      console.log(BB);
+      // console.log(BB);
       //BackTestResults(MACO);
       console.log(`Data for ${symbol} downloaded successfully to ${fileName}`);
 

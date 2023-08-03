@@ -1,43 +1,54 @@
 // DataDownloadForm.test.js
 
-import React from 'react';
-import { mount } from 'enzyme';
-import DataDownloadForm from './downloadData';
+// import React from 'react';
+// import { expect } from 'chai';
+// import { render, screen, waitFor } from '@testing-library/react';
+// import { JSDOM } from 'jsdom';
+// import fetch from 'node-fetch';
+// import DataDownloadForm from './DataDownloadForm';
 
-// This configures Enzyme to work with React 16
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+// convert above to ES modules
+const React = require('react');
+const { expect } = require('chai');
+const { render, screen, waitFor } = require('@testing-library/react');
+const { JSDOM } = require('jsdom');
+const fetch = require('node-fetch');
+const DataDownloadForm = require('./downloadData');
 
-Enzyme.configure({ adapter: new Adapter() });
 
 describe('DataDownloadForm Integration Test', () => {
+  // Set up the JSDOM environment
+  const jsdom = new JSDOM('<!doctype html><html><body></body></html>', {
+    url: 'http://localhost:3000',
+  });
+  global.window = jsdom.window;
+  global.document = jsdom.window.document;
+  global.fetch = fetch;
+
   it('should download data and display it in a table and chart when the form is submitted', async () => {
-    // Mount the DataDownloadForm component
-    const wrapper = mount(<DataDownloadForm />);
+    // Render the DataDownloadForm component
+    render(DataDownloadForm);
 
     // Simulate user input in the form fields
-    const symbolInput = wrapper.find('#symbol');
-    symbolInput.simulate('change', { target: { value: 'FNGD' } });
+    const symbolInput = screen.getByLabelText('ETF symbol:');
+    const startDateInput = screen.getByLabelText('Start Date:');
+    const endDateInput = screen.getByLabelText('End Date:');
 
-    const startDateInput = wrapper.find('#startDate');
-    startDateInput.simulate('change', { target: { value: '2023-01-01' } });
-
-    const endDateInput = wrapper.find('#endDate');
-    endDateInput.simulate('change', { target: { value: '2023-01-31' } });
+    // Set the input values
+    symbolInput.value = 'FNGD';
+    startDateInput.value = '2023-01-01';
+    endDateInput.value = '2023-01-31';
 
     // Simulate form submission
-    const form = wrapper.find('form');
-    form.simulate('submit', { preventDefault: () => {} });
+    const form = screen.getByRole('form');
+    form.dispatchEvent(new Event('submit', { cancelable: true }));
 
     // Wait for data to be downloaded and the table to be displayed
-    await new Promise((resolve) => setTimeout(resolve, 1000)); // You may need to adjust the time based on your API response time
-
-    // Assert that the table is displayed
-    const table = wrapper.find('.data-table');
-    expect(table.exists()).toBe(true);
-
-    // Assert that the chart is displayed
-    const chart = wrapper.find('#priceChart');
-    expect(chart.exists()).toBe(true);
+    await waitFor(() => {
+      const table = screen.getByRole('table');
+      const chart = screen.getByRole('figure');
+      expect(table).to.exist;
+      expect(chart).to.exist;
+    });
   });
 });

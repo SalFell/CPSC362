@@ -104,7 +104,6 @@ function simulateTrades(data) {
   }
   return trades;
 }
-// module.exports = {simulateTrades, readHistoricalDataFile};
 
 // Main function to run the program
 function MACOmain(filename) {
@@ -137,4 +136,4 @@ if (require.main === module) {
 }
 
 
-module.exports = MACOmain;
+module.exports = {simulateTrades, readHistoricalDataFile, MACOmain}; // Export the component
