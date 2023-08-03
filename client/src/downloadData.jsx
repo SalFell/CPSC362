@@ -18,7 +18,7 @@ const DataDownloadForm = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.get(`http://localhost:3001/yahoo-finance/${symbol}`, {
+      const response = await axios.get(`http://localhost:3000/yahoo-finance/${symbol}`, {
       params: {
         period1: new Date(startDate).getTime() / 1000,
         period2: new Date(endDate).getTime() / 1000,
