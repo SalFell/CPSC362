@@ -1,9 +1,9 @@
 const { expect } = require('chai');
-const { simulateTrades } = require('C:\\Users\\mball\\Desktop\\JavaScript\\MACO.js');
-const { readHistoricalDataFile } = require('C:\\Users\\mball\\Desktop\\JavaScript\\MACO.js');
+const { simulateTrades } = require('./MACO-Gabe.js');
+const { readHistoricalDataFile } = require('./MACO-Gabe.js');
 console.log("This program tests the validity of MACO.js");
 
-describe('readHistoricalDataFile()', () => {
+describe('downloadScript.readHistoricalDataFile()', () => {
   it('Should take the historical data JSON file and turn it into an array', () => {
     const data = readHistoricalDataFile('data/FNGD_historical_data.json');
     expect(data).to.be.an('array');

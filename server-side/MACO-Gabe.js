@@ -35,10 +35,10 @@ function simulateTrades(data) {
     sum = 0;
 
     //movingAverage = (movingAverage*lookbackPeriod - data[i-lookbackPeriod].Close + data[i].Close)/20;
-    console.log("Moving Average:");
-    console.log(movingAverage);
-    console.log("Close Price:");
-    console.log(data[i].Close);
+    //console.log("Moving Average:");
+    //console.log(movingAverage);
+    //console.log("Close Price:");
+    //console.log(data[i].Close);
 
     console.log(data[i].Date);
 
@@ -100,7 +100,7 @@ module.exports = {simulateTrades};
 
 // Main function to run the program
 function main() {
-  const filename = 'data/FNGD_historical_data.json';
+  const filename = 'data/historical_data.json';
   const data = downloadScript.readHistoricalDataFile(filename);
   const trades = simulateTrades(data);
 
