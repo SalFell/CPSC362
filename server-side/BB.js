@@ -1,10 +1,5 @@
 const fs = require('fs');
-
-// Function to read the JSON file and parse its content
-const readHistoricalDataFile = (filename) => {
-  const data = fs.readFileSync(filename);
-  return JSON.parse(data);
-}
+const readHistoricalDataFile = require('./readData.js');
 
 function runTradingStrategy(data, window = 20, deviations = 2) {
   const bands = [];
@@ -84,9 +79,6 @@ function runTradingStrategy(data, window = 20, deviations = 2) {
   return trades;
 }
 
-// Rest of the code remains the same...
-
-
 // Function to simulate trades based on the "Open" data
 function simulateTrades(data) {
   //when the days price goes above or below the moving average, buy or sell
@@ -164,7 +156,6 @@ function simulateTrades(data) {
   }
   return trades;
 }
-
 
 // Main function to run the program
 function BBmain(filename) {
