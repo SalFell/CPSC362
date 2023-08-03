@@ -61,7 +61,7 @@ app.get('/yahoo-finance/:symbol', async (req, res) => {
 
     if (historicalData.length > 0) {
       // Save data to the server
-      const fileName = `./data/${symbol}_historical_data.json`;
+      const fileName = `./data/historical_data.json`;
       fs.writeFileSync(fileName, JSON.stringify(historicalData, null, 2), 'utf8');
 
       // Backtest
