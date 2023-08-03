@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",

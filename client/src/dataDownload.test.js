@@ -1,19 +1,11 @@
 // DataDownloadForm.test.js
 
-// import React from 'react';
-// import { expect } from 'chai';
-// import { render, screen, waitFor } from '@testing-library/react';
-// import { JSDOM } from 'jsdom';
-// import fetch from 'node-fetch';
-// import DataDownloadForm from './DataDownloadForm';
-
-// convert above to ES modules
-const React = require('react');
-const { expect } = require('chai');
-const { render, screen, waitFor } = require('@testing-library/react');
-const { JSDOM } = require('jsdom');
-const fetch = require('node-fetch');
-const DataDownloadForm = require('./downloadData');
+ import React from 'react';
+ import { expect } from 'chai';
+ import { render, screen, waitFor } from '@testing-library/react';
+ import { JSDOM } from 'jsdom';
+ import fetch from 'node-fetch';
+ import DataDownloadForm from './downloadData';
 
 
 describe('DataDownloadForm Integration Test', () => {
