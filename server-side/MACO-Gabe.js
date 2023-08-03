@@ -1,15 +1,7 @@
-const fs = require('fs');
-
-// Function to read the JSON file and parse its content
-function readHistoricalDataFile(filename) {
-  const data = fs.readFileSync(filename);
-  return JSON.parse(data);
-}
-
-
+fs = require('fs');
+const downloadScript = require('./HistoricalDataFile.js');
 // Function to simulate trades based on the "Close" data
 function simulateTrades(data) {
-
   //when the days price goes above or below the moving average, buy or sell
   //first generate moving average, then compare to price
   const trades = [];
@@ -104,12 +96,12 @@ function simulateTrades(data) {
   }
   return trades;
 }
-module.exports = {simulateTrades, readHistoricalDataFile};
+module.exports = {simulateTrades};
 
 // Main function to run the program
 function main() {
   const filename = 'data/FNGD_historical_data.json';
-  const data = readHistoricalDataFile(filename);
+  const data = downloadScript.readHistoricalDataFile(filename);
   const trades = simulateTrades(data);
 
   // Output the trades
