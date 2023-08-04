@@ -1,6 +1,7 @@
 {
   "name": "traider-server",
   "version": "1.0.0",
+  "type": "module",
   "description": "server for traider built with node js",
   "main": "index.js",
   "scripts": {

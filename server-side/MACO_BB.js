@@ -3,7 +3,8 @@ class IStrategy {
         throw new Error("Method not implemented.");
     }
 }
-module.exports = IStrategy;
+//module.exports = IStrategy;
+export  { IStrategy };
 
 class MACO extends IStrategy {
     simulateTrades(data) {
@@ -16,6 +17,7 @@ class MACO extends IStrategy {
          let stockAmount = 0;
          let sum = 0;
          let movingAverage;
+         let previousMovingAverage;
        
          for(let i = 0; i < 19; i++)
          {
@@ -84,14 +86,22 @@ class MACO extends IStrategy {
          return trades;
        }
 }
-module.exports = MACO;
+//module.exports = MACO;
+
+export  { MACO };
 
 class BB extends IStrategy {
-    BBstrat(data, window = 20, deviations = 2) {
+    simulateTrades(data) {
+        let window = 20;
+        let deviations = 2;
         const bands = [];
         const trades = [];
         let cashReserve = 10000;
         let stockAmount = 0;
+
+        //if(data == null)
+        //{
+        //}
       
         for (let i = window - 1; i < data.length; i++) {
           const currentPrices = data.slice(i - window + 1, i + 1).map((item) => item.Close);
@@ -157,4 +167,19 @@ class BB extends IStrategy {
         return trades;
       }
 }
-module.exports = BB;
+//module.exports = BB;
+
+export { BB };
+
+class Context{
+  constructor(strategy) {
+      this.strategy = strategy;
+    }
+  
+    executeStrategy(data) {
+      return this.strategy.simulateTrades(data);
+    } 
+}
+export { Context };
+
+

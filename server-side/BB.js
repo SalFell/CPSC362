@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 function readHistoricalDataFile(filename) {
   const data = fs.readFileSync(filename);
@@ -190,7 +190,7 @@ function main() {
 
 
   // Write the trades to a JSON file
-  JSON_Trades = JSON.stringify(BBresults, null, 2);
+  let JSON_Trades = JSON.stringify(BBresults, null, 2);
   fs.writeFile("BB.json", JSON_Trades, function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
     if (err) {
       console.error('Error writing to file:', err);
