@@ -1,8 +1,8 @@
 // src/DataDownloadForm.js
 
 import React, { useState } from 'react';
-import axios from 'axios';
-import { generateGraph } from './chartScript.js';
+import { downloadData } from './services/api';
+import { generateGraph } from '../public/chartScript.js';
 
 const DataDownloadForm = () => {
   const [historicalData, setHistoricalData] = useState([]);
@@ -15,16 +15,7 @@ const DataDownloadForm = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.get(`http://localhost:3000/yahoo-finance/${symbol}`, {
-      params: {
-        period1: new Date(startDate).getTime() / 1000,
-        period2: new Date(endDate).getTime() / 1000,
-        interval: '1d',
-        events: 'history',
-        includeAdjustedClose: true,
-      },
-    });
-
+      const response = await downloadData(symbol, startDate, endDate);
       const data = response.data;
 
       if (data.length > 0) {

@@ -3,16 +3,20 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
+const router = require('./routes/dataRoutes');
 
-const PORT = process.env.PORT || 3001;
 
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 // CORS middleware
 app.use(cors({origin:'*'}));
+
+// Routes for data requests
+app.use('/yahoo-finance', dataRoutes);
 
 // Handle GET requests to /api route
 app.get("/api", (req, res) => {
