@@ -1,8 +1,15 @@
 const fs = require('fs');
-const readHistoricalDataFile = require('./readData.js');
+
+// Function to read the JSON file and parse its content
+function readHistoricalDataFile(filename) {
+  const data = fs.readFileSync(filename);
+  return JSON.parse(data);
+}
+
 
 // Function to simulate trades based on the "Close" data
 function simulateTrades(data) {
+
   //when the days price goes above or below the moving average, buy or sell
   //first generate moving average, then compare to price
   const trades = [];
@@ -124,9 +131,9 @@ function MACOmain(filename) {
   });
 }
 // Run the main function
-// if (require.main === module) {
-//   MACOmain();
-// }
+if (require.main === module) {
+  main();
+}
 
 
-module.exports = {simulateTrades, MACOmain}; // Export the component
+module.exports = {simulateTrades, readHistoricalDataFile, MACOmain}; // Export the component

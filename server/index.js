@@ -1,4 +1,4 @@
-const { MACOmain } = require('./MACO-Gabe');
+const MACOmain = require('./MACO-Gabe');
 const BBmain = require('./BB');
 //const { BackTestResults } = require('../client/src/BackTestResults');
 const processData = require('./processData');
@@ -40,9 +40,9 @@ app.get('/yahoo-finance/:symbol', async (req, res) => {
       fs.writeFileSync(fileName, JSON.stringify(historicalData, null, 2), 'utf8');
 
       // Backtest
-      MACOmain(fileName);
+      const MACO = MACOmain(fileName);
       // console.log(MACO);
-      BBmain(fileName);
+      const BB = BBmain(fileName);
       // console.log(BB);
       //BackTestResults(MACO);
       console.log(`Data for ${symbol} downloaded successfully to ${fileName}`);

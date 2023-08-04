@@ -1,122 +1,95 @@
-[{"DateOfTrade":"2022-08-22T00:00:00.000Z","Price":43.90999984741211,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"2002.54","MoneyInStock":"87931.38","TotalInPortfolio":"87931.38"},{"DateOfTrade":"2022-08-26T00:00:00.000Z","Price":39.15999984741211,"TradeType":"Sell","CashReserve":"10000.00","StockAmount":"1747.17","MoneyInStock":"68419.33","TotalInPortfolio":"78419.33"},{"DateOfTrade":"2022-08-29T00:00:00.000Z","Price":45.790000915527344,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"1965.56","MoneyInStock":"90003.09","TotalInPortfolio":"90003.09"},{"DateOfTrade":"2022-10-18T00:00:00.000Z","Price":60.25,"TradeType":"Sell","CashReserve":"10000.00","StockAmount":"1799.59","MoneyInStock":"108425.12","TotalInPortfolio":"118425.12"},{"DateOfTrade":"2022-10-19T00:00:00.000Z","Price":65.53900146484375,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"1952.17","MoneyInStock":"127943.14","TotalInPortfolio":"127943.14"},{"DateOfTrade":"2022-11-11T00:00:00.000Z","Price":62.75,"TradeType":"Sell","CashReserve":"10000.00","StockAmount":"1792.81","MoneyInStock":"112498.54","TotalInPortfolio":"122498.54"},{"DateOfTrade":"2022-12-16T00:00:00.000Z","Price":51.38999938964844,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"1987.40","MoneyInStock":"102132.27","TotalInPortfolio":"102132.27"},{"DateOfTrade":"2023-01-11T00:00:00.000Z","Price":52.56999969482422,"TradeType":"Sell","CashReserve":"10000.00","StockAmount":"1797.17","MoneyInStock":"94477.40","TotalInPortfolio":"104477.40"},{"DateOfTrade":"2023-02-21T00:00:00.000Z","Price":28.280000686645508,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"2150.78","MoneyInStock":"60824.06","TotalInPortfolio":"60824.06"},{"DateOfTrade":"2023-03-17T00:00:00.000Z","Price":22.639999389648438,"TradeType":"Sell","CashReserve":"10000.00","StockAmount":"1709.08","MoneyInStock":"38693.66","TotalInPortfolio":"48693.66"},{"DateOfTrade":"2023-04-06T00:00:00.000Z","Price":20.770000457763672,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"2190.55","MoneyInStock":"45497.67","TotalInPortfolio":"45497.67"},{"DateOfTrade":"2023-05-10T00:00:00.000Z","Price":17.079999923706055,"TradeType":"Sell","CashReserve":"10000.00","StockAmount":"1605.07","MoneyInStock":"27414.55","TotalInPortfolio":"37414.55"},{"DateOfTrade":"2023-06-08T00:00:00.000Z","Price":11.09000015258789,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"2506.78","MoneyInStock":"27800.20","TotalInPortfolio":"27800.20"},{"DateOfTrade":"2023-06-09T00:00:00.000Z","Price":10.069999694824219,"TradeType":"Sell","CashReserve":"10000.00","StockAmount":"1513.73","MoneyInStock":"15243.28","TotalInPortfolio":"25243.28"},{"DateOfTrade":"2023-06-14T00:00:00.000Z","Price":9.359999656677246,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"2582.11","MoneyInStock":"24168.53","TotalInPortfolio":"24168.53"},{"DateOfTrade":"2023-06-16T00:00:00.000Z","Price":8.449999809265137,"TradeType":"Sell","CashReserve":"10000.00","StockAmount":"1398.68","MoneyInStock":"11818.81","TotalInPortfolio":"21818.81"},{"DateOfTrade":"2023-06-20T00:00:00.000Z","Price":9.130000114440918,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"2493.97","MoneyInStock":"22769.91","TotalInPortfolio":"22769.91"}]": 1920.545184230029,
-    "MoneyInStock": 56310.38421552057,
-    "TotalInPortfolio": 56310.38421552057
-  },
-  {
-    "DateOfTrade": "2023-02-23T00:00:00.000Z",
-    "Price": 27.530000686645508,
-    "TradeType": "Sell",
-    "CashReserve": 10000,
-    "StockAmount": 1557.3050915826327,
-    "MoneyInStock": 42872.61024058642,
-    "TotalInPortfolio": 52872.61024058642
-  },
-  {
-    "DateOfTrade": "2023-02-24T00:00:00.000Z",
-    "Price": 29.18000030517578,
-    "TradeType": "Buy",
-    "CashReserve": 0,
-    "StockAmount": 1900.0055677792097,
-    "MoneyInStock": 55442.163047633025,
-    "TotalInPortfolio": 55442.163047633025
-  },
-  {
-    "DateOfTrade": "2023-03-14T00:00:00.000Z",
-    "Price": 26.3700008392334,
-    "TradeType": "Sell",
-    "CashReserve": 10000,
-    "StockAmount": 1520.7867705950262,
-    "MoneyInStock": 40103.14841688589,
-    "TotalInPortfolio": 50103.14841688589
+[{"DateOfTrade":"2023-02-21T00:00:00.000Z","Price":28.280000686645508,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"2883.12","MoneyInStock":"81534.57","TotalInPortfolio":"81534.57"},{"DateOfTrade":"2023-03-16T00:00:00.000Z","Price":25.530000686645508,"TradeType":"Sell","CashReserve":"10000.00","StockAmount":"2491.42","MoneyInStock":"63605.99","TotalInPortfolio":"73605.99"},{"DateOfTrade":"2023-04-12T00:00:00.000Z","Price":20,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"2991.42","MoneyInStock":"59828.43","TotalInPortfolio":"59828.43"},{"DateOfTrade":"2023-05-08T00:00:00.000Z","Price":18.299999237060547,"TradeType":"Sell","CashReserve":"10000.00","StockAmount":"2444.97","MoneyInStock":"44743.01","TotalInPortfolio":"54743.01"},{"DateOfTrade":"2023-06-22T00:00:00.000Z","Price":9.760000228881836,"TradeType":"Buy","CashReserve":"0.00","StockAmount":"3469.56","MoneyInStock":"33862.94","TotalInPortfolio":"33862.94"}],
+    "MoneyInStock": 79646.21416713542,
+    "TotalInPortfolio": 89646.21416713542
   },
   {
     "DateOfTrade": "2023-04-12T00:00:00.000Z",
     "Price": 21.329999923706055,
     "TradeType": "Buy",
     "CashReserve": 0,
-    "StockAmount": 1989.610025905311,
-    "MoneyInStock": 42438.38170076509,
-    "TotalInPortfolio": 42438.38170076509
+    "StockAmount": 3489.157408983782,
+    "MoneyInStock": 74423.72726742248,
+    "TotalInPortfolio": 74423.72726742248
   },
   {
     "DateOfTrade": "2023-04-13T00:00:00.000Z",
     "Price": 19.780000686645508,
     "TradeType": "Sell",
     "CashReserve": 10000,
-    "StockAmount": 1484.0488705535058,
-    "MoneyInStock": 29354.487678563837,
-    "TotalInPortfolio": 39354.48767856383
+    "StockAmount": 2983.5962536319767,
+    "MoneyInStock": 59015.53594551346,
+    "TotalInPortfolio": 69015.53594551346
   },
   {
     "DateOfTrade": "2023-04-20T00:00:00.000Z",
     "Price": 21.139999389648438,
     "TradeType": "Buy",
     "CashReserve": 0,
-    "StockAmount": 1957.0857810889277,
-    "MoneyInStock": 41372.79221770957,
-    "TotalInPortfolio": 41372.79221770957
+    "StockAmount": 3456.6331641673987,
+    "MoneyInStock": 73073.22298073735,
+    "TotalInPortfolio": 73073.22298073735
   },
   {
     "DateOfTrade": "2023-04-27T00:00:00.000Z",
     "Price": 19.200000762939453,
     "TradeType": "Sell",
     "CashReserve": 10000,
-    "StockAmount": 1436.2524684516507,
-    "MoneyInStock": 27576.048490045367,
-    "TotalInPortfolio": 37576.04849004537
+    "StockAmount": 2935.799851530122,
+    "MoneyInStock": 56367.359389215875,
+    "TotalInPortfolio": 66367.35938921588
   },
   {
     "DateOfTrade": "2023-06-26T00:00:00.000Z",
     "Price": 10.170000076293945,
     "TradeType": "Buy",
     "CashReserve": 0,
-    "StockAmount": 2419.536630200065,
-    "MoneyInStock": 24606.687713730655,
-    "TotalInPortfolio": 24606.687713730655
+    "StockAmount": 3919.084013278536,
+    "MoneyInStock": 39857.08471404509,
+    "TotalInPortfolio": 39857.08471404509
   },
   {
     "DateOfTrade": "2023-06-27T00:00:00.000Z",
     "Price": 9.529999732971191,
     "TradeType": "Sell",
     "CashReserve": 10000,
-    "StockAmount": 1370.2186574615414,
-    "MoneyInStock": 13058.183439720633,
-    "TotalInPortfolio": 23058.183439720633
+    "StockAmount": 2869.766040540013,
+    "MoneyInStock": 27348.869600036116,
+    "TotalInPortfolio": 37348.869600036116
   },
   {
     "DateOfTrade": "2023-07-21T00:00:00.000Z",
     "Price": 8.770000457763672,
     "TradeType": "Buy",
     "CashReserve": 0,
-    "StockAmount": 2510.4694531325345,
-    "MoneyInStock": 22016.818253174042,
-    "TotalInPortfolio": 22016.818253174042
+    "StockAmount": 4010.016836211006,
+    "MoneyInStock": 35167.84948921056,
+    "TotalInPortfolio": 35167.84948921056
   },
   {
     "DateOfTrade": "2023-07-24T00:00:00.000Z",
     "Price": 8.710000038146973,
     "TradeType": "Sell",
     "CashReserve": 10000,
-    "StockAmount": 1362.3638324432984,
-    "MoneyInStock": 11866.189032551185,
-    "TotalInPortfolio": 21866.189032551185
+    "StockAmount": 2861.91121552177,
+    "MoneyInStock": 24927.246796367865,
+    "TotalInPortfolio": 34927.246796367865
   },
   {
     "DateOfTrade": "2023-07-26T00:00:00.000Z",
     "Price": 8.619999885559082,
     "TradeType": "Buy",
     "CashReserve": 0,
-    "StockAmount": 2522.456655269527,
-    "MoneyInStock": 21743.576079751067,
-    "TotalInPortfolio": 21743.576079751067
+    "StockAmount": 4022.004038347998,
+    "MoneyInStock": 34669.67435027791,
+    "TotalInPortfolio": 34669.67435027791
   },
   {
     "DateOfTrade": "2023-07-28T00:00:00.000Z",
     "Price": 7.96999979019165,
     "TradeType": "Sell",
     "CashReserve": 10000,
-    "StockAmount": 1267.7514779486207,
-    "MoneyInStock": 10103.979013265662,
-    "TotalInPortfolio": 20103.979013265664
+    "StockAmount": 2767.2988610270922,
+    "MoneyInStock": 22055.371341783517,
+    "TotalInPortfolio": 32055.371341783517
   }
 ]
