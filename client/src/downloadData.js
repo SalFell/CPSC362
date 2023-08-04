@@ -1,7 +1,7 @@
 // src/DataDownloadForm.js
 
 import React, { useState } from 'react';
-import axios from 'axios';
+import { axios } from 'axios';
 import { generateGraph } from './chartScript';
 
 const DataDownloadForm = () => {
@@ -45,7 +45,7 @@ const DataDownloadForm = () => {
     <div className="data-download-form" data-testid="data-download-form">
     <form id="dataForm" onSubmit ={handleFormSubmit}>
         <label htmlFor="symbol">ETF symbol:</label>
-        <select id="symbol" onChange={(e) => setSymbol(e.target.value)} required>
+        <select id="symbol" data-testid="ETF symbol:" onChange={(e) => setSymbol(e.target.value)} required>
           <option value="">Please select</option>
           <option value="FNGD">FNGD</option>
           <option value="FNGU">FNGU</option>
