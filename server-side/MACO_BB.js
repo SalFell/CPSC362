@@ -157,4 +157,4 @@ class BB extends IStrategy {
         return trades;
       }
 }
-module.export = BB;
+module.exports = BB;
