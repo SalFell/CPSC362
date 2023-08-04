@@ -1,14 +1,13 @@
-const MACOmain = require('./MACO-Gabe');
+const { MACOmain } = require('./MACO-Gabe');
 const BBmain = require('./BB');
 //const { BackTestResults } = require('../client/src/BackTestResults');
-const processData = require('./processData');
 const express = require('express');
 const axios = require('axios');
 const fs = require('fs');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 3000; // You can choose any available port number
+const port = 3001; // You can choose any available port number
 
 
 // CORS middleware
@@ -21,6 +20,32 @@ next();
 })
 
 app.use(express.json());
+
+function processData(data) {
+    if (
+      data.chart &&
+      data.chart.result &&
+      data.chart.result[0].timestamp &&
+      data.chart.result[0].indicators &&
+      data.chart.result[0].indicators.quote &&
+      data.chart.result[0].indicators.quote[0]
+    ) {
+      const timestamps = data.chart.result[0].timestamp;
+      const quotes = data.chart.result[0].indicators.quote[0];
+
+      return timestamps.map((timestamp, index) => ({
+        Date: new Date(timestamp * 1000).toISOString().split('T')[0],
+        Open: quotes.open[index],
+        High: quotes.high[index],
+        Low: quotes.low[index],
+        Close: quotes.close[index],
+        Volume: quotes.volume[index],
+      }));
+    } else {
+      window.alert('No historical price data received from Yahoo Finance API.');
+      return [];
+    }
+};
 
 // Endpoint to proxy the Yahoo Finance API request
 app.get('/yahoo-finance/:symbol', async (req, res) => {
@@ -40,11 +65,8 @@ app.get('/yahoo-finance/:symbol', async (req, res) => {
       fs.writeFileSync(fileName, JSON.stringify(historicalData, null, 2), 'utf8');
 
       // Backtest
-      const MACO = MACOmain(fileName);
-      // console.log(MACO);
-      const BB = BBmain(fileName);
-      // console.log(BB);
-      //BackTestResults(MACO);
+      MACOmain(fileName);
+      BBmain(fileName);
       console.log(`Data for ${symbol} downloaded successfully to ${fileName}`);
 
       res.json(historicalData);
