@@ -2,10 +2,11 @@ const fs = require('fs');
 const readHistoricalDataFile = require('./readData.js');
 
 // Function to simulate trades based on the "Close" data
-function simulateTrades(data) {
+function MACO() {
+  const data = readHistoricalDataFile();
   //when the days price goes above or below the moving average, buy or sell
   //first generate moving average, then compare to price
-  const trades = [];
+    const trades = [];
   let cashReserve = 10000;
   let cashForTrade = 90000
   let stockAmount = 0;
@@ -23,8 +24,6 @@ function simulateTrades(data) {
 
   //all trades will be $10,000
   for (let i = lookbackPeriod; i < data.length - 1; i++) {
-
-
     previousMovingAverage = movingAverage;
 
     //Add past lookbackperiod number of days of prices
@@ -34,15 +33,7 @@ function simulateTrades(data) {
     //Divide that by the lookbackperiod
     movingAverage = sum/lookbackPeriod;
     sum = 0;
-
-    //movingAverage = (movingAverage*lookbackPeriod - data[i-lookbackPeriod].Close + data[i].Close)/20;
-    console.log("Moving Average:");
-    console.log(movingAverage);
-    console.log("Close Price:");
-    console.log(data[i].Close);
-
-    console.log(data[i].Date);
-
+ 
     if(data[i].Close > movingAverage && data[i-1].Close < previousMovingAverage)
     {
       //buy
@@ -60,7 +51,7 @@ function simulateTrades(data) {
 
       trades.push({
         DateOfTrade: date.toISOString(),
-        Price: price,
+        Price: price.toFixed(2),
         TradeType: "Buy",
         CashReserve: cashReserve,
         StockAmount: stockAmount,
@@ -85,7 +76,7 @@ function simulateTrades(data) {
 
       trades.push({
         DateOfTrade: date.toISOString(),
-        Price: price,
+        Price: price.toFixed(2),
         TradeType: "Sell",
         CashReserve: cashReserve,
         StockAmount: stockAmount,
@@ -97,36 +88,4 @@ function simulateTrades(data) {
   }
   return trades;
 }
-
-// Main function to run the program
-function MACOmain(filename) {
-  const data = readHistoricalDataFile(filename);
-  const trades = simulateTrades(data);
-
-  // Output the trades
-  console.log('Trades:');
-  console.log('------------------------------------------------');
-  trades.forEach((trade) => {
-    console.log(
-      `On ${trade.DateOfTrade}--- ${trade.TradeType}ing: $10000 in stock. Portfolio: $${trade.TotalInPortfolio} Amount of Stock: ${trade.StockAmount} Cash Reserve: ${trade.CashReserve}`
-    );
-  });
-  console.log('------------------------------------------------');
-
-  // Write the trades to a JSON file
-  JSON_Trades = JSON.stringify(trades, null, 2);
-  fs.writeFile("./data/MACO.json", JSON_Trades, function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
-    if (err) {
-      console.error('Error writing to file:', err);
-    } else {
-      console.log('File "MACO.json" has been saved successfully.');
-    }
-  });
-}
-// Run the main function
-// if (require.main === module) {
-//   MACOmain();
-// }
-
-
-module.exports = {simulateTrades, MACOmain}; // Export the component
+module.exports = MACO; // Export the component

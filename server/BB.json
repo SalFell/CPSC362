@@ -1,0 +1,101 @@
+[
+  {
+    "DateOfTrade": "2023-03-16T00:00:00.000Z",
+    "Price": "22.67",
+    "TradeType": "Buy",
+    "CashReserve": "2.53",
+    "StockAmount": "441.00",
+    "MoneyInStock": "9997.47",
+    "TotalInPortfolio": "10000.00"
+  },
+  {
+    "DateOfTrade": "2023-03-17T00:00:00.000Z",
+    "Price": "23.23",
+    "TradeType": "Buy",
+    "CashReserve": "2.53",
+    "StockAmount": "441.00",
+    "MoneyInStock": "10244.43",
+    "TotalInPortfolio": "10246.96"
+  },
+  {
+    "DateOfTrade": "2023-03-21T00:00:00.000Z",
+    "Price": "21.71",
+    "TradeType": "Buy",
+    "CashReserve": "2.53",
+    "StockAmount": "441.00",
+    "MoneyInStock": "9574.11",
+    "TotalInPortfolio": "9576.64"
+  },
+  {
+    "DateOfTrade": "2023-04-25T00:00:00.000Z",
+    "Price": "22.93",
+    "TradeType": "Sell",
+    "CashReserve": "10114.66",
+    "StockAmount": "0.00",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "10114.66"
+  },
+  {
+    "DateOfTrade": "2023-05-08T00:00:00.000Z",
+    "Price": "17.58",
+    "TradeType": "Buy",
+    "CashReserve": "6.16",
+    "StockAmount": "575.00",
+    "MoneyInStock": "10108.50",
+    "TotalInPortfolio": "10114.66"
+  },
+  {
+    "DateOfTrade": "2023-05-10T00:00:00.000Z",
+    "Price": "16.71",
+    "TradeType": "Buy",
+    "CashReserve": "6.16",
+    "StockAmount": "575.00",
+    "MoneyInStock": "9608.25",
+    "TotalInPortfolio": "9614.41"
+  },
+  {
+    "DateOfTrade": "2023-05-11T00:00:00.000Z",
+    "Price": "16.25",
+    "TradeType": "Buy",
+    "CashReserve": "6.16",
+    "StockAmount": "575.00",
+    "MoneyInStock": "9343.75",
+    "TotalInPortfolio": "9349.91"
+  },
+  {
+    "DateOfTrade": "2023-05-18T00:00:00.000Z",
+    "Price": "13.49",
+    "TradeType": "Buy",
+    "CashReserve": "6.16",
+    "StockAmount": "575.00",
+    "MoneyInStock": "7756.75",
+    "TotalInPortfolio": "7762.91"
+  },
+  {
+    "DateOfTrade": "2023-07-13T00:00:00.000Z",
+    "Price": "7.97",
+    "TradeType": "Buy",
+    "CashReserve": "6.16",
+    "StockAmount": "575.00",
+    "MoneyInStock": "4582.75",
+    "TotalInPortfolio": "4588.91"
+  },
+  {
+    "DateOfTrade": "2023-07-17T00:00:00.000Z",
+    "Price": "7.77",
+    "TradeType": "Buy",
+    "CashReserve": "6.16",
+    "StockAmount": "575.00",
+    "MoneyInStock": "4467.75",
+    "TotalInPortfolio": "4473.91"
+  },
+  {
+    "DateOfTrade": "2023-07-18T00:00:00.000Z",
+    "Price": "7.45",
+    "TradeType": "Buy",
+    "CashReserve": "6.16",
+    "StockAmount": "575.00",
+    "MoneyInStock": "4283.75",
+    "TotalInPortfolio": "4289.91"
+  }
+]

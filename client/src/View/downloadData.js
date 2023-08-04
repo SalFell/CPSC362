@@ -1,8 +1,8 @@
 // src/DataDownloadForm.js
 
 import React, { useState } from 'react';
-import { axios } from 'axios';
-import { generateGraph } from './chartScript';
+import axios from 'axios';
+import { generateGraph } from './chartScript.js';
 
 const DataDownloadForm = () => {
   const [historicalData, setHistoricalData] = useState([]);

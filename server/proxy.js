@@ -1,6 +1,5 @@
-const { MACOmain } = require('./MACO-Gabe');
-const BBmain = require('./BB');
-//const { BackTestResults } = require('../client/src/BackTestResults');
+const stratsMain = require('./Model/stratsMain.js');
+const processData = require('./Model/processData.js');
 const express = require('express');
 const axios = require('axios');
 const fs = require('fs');
@@ -21,32 +20,6 @@ next();
 
 app.use(express.json());
 
-function processData(data) {
-    if (
-      data.chart &&
-      data.chart.result &&
-      data.chart.result[0].timestamp &&
-      data.chart.result[0].indicators &&
-      data.chart.result[0].indicators.quote &&
-      data.chart.result[0].indicators.quote[0]
-    ) {
-      const timestamps = data.chart.result[0].timestamp;
-      const quotes = data.chart.result[0].indicators.quote[0];
-
-      return timestamps.map((timestamp, index) => ({
-        Date: new Date(timestamp * 1000).toISOString().split('T')[0],
-        Open: quotes.open[index],
-        High: quotes.high[index],
-        Low: quotes.low[index],
-        Close: quotes.close[index],
-        Volume: quotes.volume[index],
-      }));
-    } else {
-      window.alert('No historical price data received from Yahoo Finance API.');
-      return [];
-    }
-};
-
 // Endpoint to proxy the Yahoo Finance API request
 app.get('/yahoo-finance/:symbol', async (req, res) => {
   const symbol = req.params.symbol;
@@ -61,12 +34,11 @@ app.get('/yahoo-finance/:symbol', async (req, res) => {
 
     if (historicalData.length > 0) {
       // Save data to the server
-      const fileName = `./data/${symbol}_historical_data.json`;
+      const fileName = `./data/historical_data.json`;
       fs.writeFileSync(fileName, JSON.stringify(historicalData, null, 2), 'utf8');
 
-      // Backtest
-      MACOmain(fileName);
-      BBmain(fileName);
+      // Trading strategies
+      stratsMain();
       console.log(`Data for ${symbol} downloaded successfully to ${fileName}`);
 
       res.json(historicalData);
