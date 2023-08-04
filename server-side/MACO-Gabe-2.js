@@ -1,7 +1,15 @@
-fs = require('fs');
-const downloadScript = require('./HistoricalDataFile.js');
+const fs = require('fs');
+
+// Function to read the JSON file and parse its content
+function readHistoricalDataFile(filename) {
+  const data = fs.readFileSync(filename);
+  return JSON.parse(data);
+}
+
+
 // Function to simulate trades based on the "Close" data
 function simulateTrades(data) {
+
   //when the days price goes above or below the moving average, buy or sell
   //first generate moving average, then compare to price
   const trades = [];
@@ -41,8 +49,7 @@ function simulateTrades(data) {
     console.log("Close Price:");
     console.log(data[i].Close);
     console.log("\n");
-
-   
+    
 
     if(data[i].Close > movingAverage && data[i-1].Close < previousMovingAverage)
     {
@@ -61,14 +68,12 @@ function simulateTrades(data) {
 
       trades.push({
         DateOfTrade: date.toISOString(),
-        //Price: price,
+        Price: price,
         TradeType: "Buy",
-        //CashReserve: cashReserve,
-        //StockAmount: stockAmount,
-        //MoneyInStock: (stockAmount*price),
+        CashReserve: cashReserve,
+        StockAmount: stockAmount,
+        MoneyInStock: (stockAmount*price),
         TotalInPortfolio: (cashReserve + stockAmount*price),
-        //movingAverage: movingAverage
-        PercentReturn: ((cashReserve + stockAmount*price)/100000)*100
       });
     }
     else if (data[i].Close < movingAverage && data[i-1].Close > previousMovingAverage)
@@ -88,26 +93,24 @@ function simulateTrades(data) {
 
       trades.push({
         DateOfTrade: date.toISOString(),
-        //Price: price,
+        Price: price,
         TradeType: "Sell",
-        //CashReserve: cashReserve,
-        //StockAmount: stockAmount,
-        //MoneyInStock: (stockAmount*price),
+        CashReserve: cashReserve,
+        StockAmount: stockAmount,
+        MoneyInStock: (stockAmount*price),
         TotalInPortfolio: (cashReserve + stockAmount*price),
-        //movingAverage: movingAverage
-        PercentReturn: ((cashReserve + stockAmount*price)/100000)*100
       });
     }
 
   }
   return trades;
 }
-module.exports = {simulateTrades};
+module.exports = {simulateTrades, readHistoricalDataFile};
 
 // Main function to run the program
 function main() {
   const filename = 'data/historical_data.json';
-  const data = downloadScript.readHistoricalDataFile(filename);
+  const data = readHistoricalDataFile(filename);
   const trades = simulateTrades(data);
 
   // Output the trades
@@ -115,7 +118,7 @@ function main() {
   console.log('------------------------------------------------');
   trades.forEach((trade) => {
     console.log(
-      `On ${trade.DateOfTrade}--- ${trade.TradeType}ing: $10000 in stock. Portfolio: $${trade.TotalInPortfolio} Amount of Stock: ${trade.StockAmount} Moving Average: ${trade.movingAverage}`
+      `On ${trade.DateOfTrade}--- ${trade.TradeType}ing: $10000 in stock. Portfolio: $${trade.TotalInPortfolio} Amount of Stock: ${trade.StockAmount} Cash Reserve: ${trade.CashReserve}`
     );
   });
   console.log('------------------------------------------------');
