@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const { simulateTrades } = require('../MACO-Gabe.js');
-const readHistoricalDataFile = require('../readData.js');
+const { readHistoricalDataFile } = require('../readData.js');
 console.log("This program tests the validity of MACO.js");
 
 describe('readHistoricalDataFile()', () => {
