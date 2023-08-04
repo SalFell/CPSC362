@@ -9,7 +9,14 @@ const readHistoricalDataFile = function() {
 export { readHistoricalDataFile };
 
 const writeTradeDataFile = function(data, filename) {
-  fs.writeFileSync('data/'+filename+'_trades.json', JSON.stringify(data));
+  fs.writeFile("data/"+filename+".json", JSON.stringify(data,null,2), function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
+    if (err) {
+      console.error('Error writing to file:', err);
+    } else {
+      console.log('File "MACO.json" has been saved successfully.');
+    }
+  });
+  //fs.writeFile('data/'+filename+'_trades.json', JSON.stringify(data));
 }
 export { writeTradeDataFile };
 
