@@ -6,6 +6,12 @@ Built with Node.js/Express for the back-end and React for the front-end.
 
 Designed using MVC architecture.
 
+## How to run
+1. Open a terminal
+2. Move into client/src/server and run 'npm start' to start the Nodejs/Express server.
+3. Open a second terminal
+4. Move into client/ and run 'npm start' to start the client. A browser tab will be automatically created.
+
 ## Features
 1. Ability to download the historical data of FNGU and FNGD for the past three years between
 01/01/2020 and Yesterday from Yahoo Finance and save them in JSON format on a server. The downloaded data includes Date, Open, High, Low, Close, and Volume.
