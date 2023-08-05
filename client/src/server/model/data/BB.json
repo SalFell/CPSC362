@@ -1,112 +1,1132 @@
 [
   {
-    "DateOfTrade": "2023-03-16T00:00:00.000Z",
-    "Price": "22.67",
-    "TradeType": "Buy",
+    "DateOfTrade": "2020-02-03T00:00:00.000Z",
+    "Price": "85.17",
+    "TradeType": "Sell",
     "CashReserve": "90000.00",
-    "StockAmount": "441.11",
-    "MoneyInStock": "10000.00",
-    "TotalInPortfolio": "100000.00",
-    "PercentReturn": "0.00"
+    "StockAmount": "117.41",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "90000.00",
+    "PercentReturn": "100.00"
+  },
+  {
+    "DateOfTrade": "2020-02-04T00:00:00.000Z",
+    "Price": "95.10",
+    "TradeType": "Sell",
+    "CashReserve": "80000.00",
+    "StockAmount": "222.56",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "80000.00",
+    "PercentReturn": "101.17"
+  },
+  {
+    "DateOfTrade": "2020-02-06T00:00:00.000Z",
+    "Price": "92.07",
+    "TradeType": "Sell",
+    "CashReserve": "70000.00",
+    "StockAmount": "331.18",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "70000.00",
+    "PercentReturn": "100.49"
+  },
+  {
+    "DateOfTrade": "2020-02-19T00:00:00.000Z",
+    "Price": "114.10",
+    "TradeType": "Sell",
+    "CashReserve": "60000.00",
+    "StockAmount": "418.82",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "60000.00",
+    "PercentReturn": "107.79"
+  },
+  {
+    "DateOfTrade": "2020-02-27T00:00:00.000Z",
+    "Price": "68.26",
+    "TradeType": "Buy",
+    "CashReserve": "50000.00",
+    "StockAmount": "565.32",
+    "MoneyInStock": "38588.66",
+    "TotalInPortfolio": "88588.66",
+    "PercentReturn": "-11.41"
+  },
+  {
+    "DateOfTrade": "2020-03-09T00:00:00.000Z",
+    "Price": "53.75",
+    "TradeType": "Buy",
+    "CashReserve": "40000.00",
+    "StockAmount": "751.37",
+    "MoneyInStock": "40385.89",
+    "TotalInPortfolio": "80385.89",
+    "PercentReturn": "-19.61"
+  },
+  {
+    "DateOfTrade": "2020-03-12T00:00:00.000Z",
+    "Price": "38.78",
+    "TradeType": "Buy",
+    "CashReserve": "30000.00",
+    "StockAmount": "1009.23",
+    "MoneyInStock": "39137.95",
+    "TotalInPortfolio": "69137.95",
+    "PercentReturn": "-30.86"
+  },
+  {
+    "DateOfTrade": "2020-04-13T00:00:00.000Z",
+    "Price": "48.54",
+    "TradeType": "Sell",
+    "CashReserve": "20000.00",
+    "StockAmount": "1215.25",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "20000.00",
+    "PercentReturn": "78.99"
+  },
+  {
+    "DateOfTrade": "2020-04-14T00:00:00.000Z",
+    "Price": "55.56",
+    "TradeType": "Sell",
+    "CashReserve": "10000.00",
+    "StockAmount": "1395.23",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "10000.00",
+    "PercentReturn": "87.52"
+  },
+  {
+    "DateOfTrade": "2020-04-15T00:00:00.000Z",
+    "Price": "56.81",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "89.26"
+  },
+  {
+    "DateOfTrade": "2020-04-16T00:00:00.000Z",
+    "Price": "59.84",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "94.02"
+  },
+  {
+    "DateOfTrade": "2020-05-08T00:00:00.000Z",
+    "Price": "68.29",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "107.30"
+  },
+  {
+    "DateOfTrade": "2020-05-11T00:00:00.000Z",
+    "Price": "70.10",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "110.15"
+  },
+  {
+    "DateOfTrade": "2020-05-18T00:00:00.000Z",
+    "Price": "74.68",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "117.34"
+  },
+  {
+    "DateOfTrade": "2020-05-19T00:00:00.000Z",
+    "Price": "75.45",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "118.55"
+  },
+  {
+    "DateOfTrade": "2020-05-20T00:00:00.000Z",
+    "Price": "80.50",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "126.49"
+  },
+  {
+    "DateOfTrade": "2020-06-08T00:00:00.000Z",
+    "Price": "89.80",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "141.10"
+  },
+  {
+    "DateOfTrade": "2020-06-09T00:00:00.000Z",
+    "Price": "93.18",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "146.41"
+  },
+  {
+    "DateOfTrade": "2020-06-10T00:00:00.000Z",
+    "Price": "98.17",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "154.25"
+  },
+  {
+    "DateOfTrade": "2020-07-02T00:00:00.000Z",
+    "Price": "105.73",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "166.13"
+  },
+  {
+    "DateOfTrade": "2020-07-06T00:00:00.000Z",
+    "Price": "122.65",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "192.71"
+  },
+  {
+    "DateOfTrade": "2020-07-07T00:00:00.000Z",
+    "Price": "121.37",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "190.70"
+  },
+  {
+    "DateOfTrade": "2020-07-08T00:00:00.000Z",
+    "Price": "131.00",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "205.83"
+  },
+  {
+    "DateOfTrade": "2020-07-09T00:00:00.000Z",
+    "Price": "137.25",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "215.65"
+  },
+  {
+    "DateOfTrade": "2020-07-10T00:00:00.000Z",
+    "Price": "145.82",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "229.12"
+  },
+  {
+    "DateOfTrade": "2020-08-06T00:00:00.000Z",
+    "Price": "153.12",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "240.59"
+  },
+  {
+    "DateOfTrade": "2020-08-17T00:00:00.000Z",
+    "Price": "165.50",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "260.04"
+  },
+  {
+    "DateOfTrade": "2020-08-18T00:00:00.000Z",
+    "Price": "171.80",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "269.94"
+  },
+  {
+    "DateOfTrade": "2020-08-20T00:00:00.000Z",
+    "Price": "180.26",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "283.23"
+  },
+  {
+    "DateOfTrade": "2020-08-21T00:00:00.000Z",
+    "Price": "188.38",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "295.99"
+  },
+  {
+    "DateOfTrade": "2020-08-24T00:00:00.000Z",
+    "Price": "192.50",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "302.47"
+  },
+  {
+    "DateOfTrade": "2020-08-25T00:00:00.000Z",
+    "Price": "198.99",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "312.66"
+  },
+  {
+    "DateOfTrade": "2020-08-26T00:00:00.000Z",
+    "Price": "221.40",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "347.88"
+  },
+  {
+    "DateOfTrade": "2020-08-31T00:00:00.000Z",
+    "Price": "234.21",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "368.00"
+  },
+  {
+    "DateOfTrade": "2020-10-12T00:00:00.000Z",
+    "Price": "224.97",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "353.49"
+  },
+  {
+    "DateOfTrade": "2020-10-13T00:00:00.000Z",
+    "Price": "224.92",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "353.41"
+  },
+  {
+    "DateOfTrade": "2020-10-30T00:00:00.000Z",
+    "Price": "175.26",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "275378.46",
+    "TotalInPortfolio": "275378.46",
+    "PercentReturn": "175.38"
+  },
+  {
+    "DateOfTrade": "2020-11-02T00:00:00.000Z",
+    "Price": "174.25",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "273791.50",
+    "TotalInPortfolio": "273791.50",
+    "PercentReturn": "173.79"
+  },
+  {
+    "DateOfTrade": "2020-12-07T00:00:00.000Z",
+    "Price": "241.25",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "379.07"
+  },
+  {
+    "DateOfTrade": "2020-12-15T00:00:00.000Z",
+    "Price": "261.96",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "411.61"
+  },
+  {
+    "DateOfTrade": "2020-12-16T00:00:00.000Z",
+    "Price": "268.30",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "421.57"
+  },
+  {
+    "DateOfTrade": "2020-12-17T00:00:00.000Z",
+    "Price": "276.50",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "434.45"
+  },
+  {
+    "DateOfTrade": "2021-01-08T00:00:00.000Z",
+    "Price": "309.10",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "485.68"
+  },
+  {
+    "DateOfTrade": "2021-01-20T00:00:00.000Z",
+    "Price": "335.01",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "526.39"
+  },
+  {
+    "DateOfTrade": "2021-01-21T00:00:00.000Z",
+    "Price": "335.85",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "527.71"
+  },
+  {
+    "DateOfTrade": "2021-01-22T00:00:00.000Z",
+    "Price": "337.67",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "530.57"
+  },
+  {
+    "DateOfTrade": "2021-01-25T00:00:00.000Z",
+    "Price": "344.95",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "542.01"
+  },
+  {
+    "DateOfTrade": "2021-02-10T00:00:00.000Z",
+    "Price": "406.42",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "638.59"
+  },
+  {
+    "DateOfTrade": "2021-03-03T00:00:00.000Z",
+    "Price": "309.10",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "485675.49",
+    "TotalInPortfolio": "485675.49",
+    "PercentReturn": "385.68"
+  },
+  {
+    "DateOfTrade": "2021-03-04T00:00:00.000Z",
+    "Price": "284.00",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "446236.93",
+    "TotalInPortfolio": "446236.93",
+    "PercentReturn": "346.24"
+  },
+  {
+    "DateOfTrade": "2021-03-08T00:00:00.000Z",
+    "Price": "247.60",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "389043.20",
+    "TotalInPortfolio": "389043.20",
+    "PercentReturn": "289.04"
+  },
+  {
+    "DateOfTrade": "2021-04-13T00:00:00.000Z",
+    "Price": "365.70",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "574.61"
+  },
+  {
+    "DateOfTrade": "2021-05-04T00:00:00.000Z",
+    "Price": "292.20",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "459121.26",
+    "TotalInPortfolio": "459121.26",
+    "PercentReturn": "359.12"
+  },
+  {
+    "DateOfTrade": "2021-05-05T00:00:00.000Z",
+    "Price": "286.50",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "450165.08",
+    "TotalInPortfolio": "450165.08",
+    "PercentReturn": "350.17"
+  },
+  {
+    "DateOfTrade": "2021-05-10T00:00:00.000Z",
+    "Price": "261.60",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "411040.79",
+    "TotalInPortfolio": "411040.79",
+    "PercentReturn": "311.04"
+  },
+  {
+    "DateOfTrade": "2021-05-12T00:00:00.000Z",
+    "Price": "243.60",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "382758.17",
+    "TotalInPortfolio": "382758.17",
+    "PercentReturn": "282.76"
+  },
+  {
+    "DateOfTrade": "2021-05-13T00:00:00.000Z",
+    "Price": "239.00",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "375530.38",
+    "TotalInPortfolio": "375530.38",
+    "PercentReturn": "275.53"
+  },
+  {
+    "DateOfTrade": "2021-06-22T00:00:00.000Z",
+    "Price": "335.70",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "527.47"
+  },
+  {
+    "DateOfTrade": "2021-06-23T00:00:00.000Z",
+    "Price": "349.50",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "549.15"
+  },
+  {
+    "DateOfTrade": "2021-06-24T00:00:00.000Z",
+    "Price": "362.00",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "568.79"
+  },
+  {
+    "DateOfTrade": "2021-06-25T00:00:00.000Z",
+    "Price": "368.50",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "579.01"
+  },
+  {
+    "DateOfTrade": "2021-06-28T00:00:00.000Z",
+    "Price": "386.80",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "607.76"
+  },
+  {
+    "DateOfTrade": "2021-06-29T00:00:00.000Z",
+    "Price": "389.00",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "611.22"
+  },
+  {
+    "DateOfTrade": "2021-08-16T00:00:00.000Z",
+    "Price": "342.10",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "537526.96",
+    "TotalInPortfolio": "537526.96",
+    "PercentReturn": "437.53"
+  },
+  {
+    "DateOfTrade": "2021-08-17T00:00:00.000Z",
+    "Price": "322.10",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "506101.83",
+    "TotalInPortfolio": "506101.83",
+    "PercentReturn": "406.10"
+  },
+  {
+    "DateOfTrade": "2021-08-18T00:00:00.000Z",
+    "Price": "316.80",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "497774.14",
+    "TotalInPortfolio": "497774.14",
+    "PercentReturn": "397.77"
+  },
+  {
+    "DateOfTrade": "2021-08-19T00:00:00.000Z",
+    "Price": "313.60",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "492746.15",
+    "TotalInPortfolio": "492746.15",
+    "PercentReturn": "392.75"
+  },
+  {
+    "DateOfTrade": "2021-09-01T00:00:00.000Z",
+    "Price": "401.40",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "630.70"
+  },
+  {
+    "DateOfTrade": "2021-09-20T00:00:00.000Z",
+    "Price": "338.80",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "532341.79",
+    "TotalInPortfolio": "532341.79",
+    "PercentReturn": "432.34"
+  },
+  {
+    "DateOfTrade": "2021-10-04T00:00:00.000Z",
+    "Price": "306.00",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "480804.58",
+    "TotalInPortfolio": "480804.58",
+    "PercentReturn": "380.80"
+  },
+  {
+    "DateOfTrade": "2021-10-18T00:00:00.000Z",
+    "Price": "402.40",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "632.27"
+  },
+  {
+    "DateOfTrade": "2021-10-19T00:00:00.000Z",
+    "Price": "421.50",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "662.28"
+  },
+  {
+    "DateOfTrade": "2021-10-20T00:00:00.000Z",
+    "Price": "417.60",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "656.16"
+  },
+  {
+    "DateOfTrade": "2021-10-21T00:00:00.000Z",
+    "Price": "430.30",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "676.11"
+  },
+  {
+    "DateOfTrade": "2021-11-26T00:00:00.000Z",
+    "Price": "425.20",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "668098.42",
+    "TotalInPortfolio": "668098.42",
+    "PercentReturn": "568.10"
+  },
+  {
+    "DateOfTrade": "2021-12-01T00:00:00.000Z",
+    "Price": "390.50",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "613575.78",
+    "TotalInPortfolio": "613575.78",
+    "PercentReturn": "513.58"
+  },
+  {
+    "DateOfTrade": "2021-12-02T00:00:00.000Z",
+    "Price": "391.70",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "615461.31",
+    "TotalInPortfolio": "615461.31",
+    "PercentReturn": "515.46"
+  },
+  {
+    "DateOfTrade": "2021-12-03T00:00:00.000Z",
+    "Price": "351.20",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "551825.41",
+    "TotalInPortfolio": "551825.41",
+    "PercentReturn": "451.83"
+  },
+  {
+    "DateOfTrade": "2022-01-19T00:00:00.000Z",
+    "Price": "308.30",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "484418.46",
+    "TotalInPortfolio": "484418.46",
+    "PercentReturn": "384.42"
+  },
+  {
+    "DateOfTrade": "2022-01-21T00:00:00.000Z",
+    "Price": "257.40",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "404441.49",
+    "TotalInPortfolio": "404441.49",
+    "PercentReturn": "304.44"
+  },
+  {
+    "DateOfTrade": "2022-01-24T00:00:00.000Z",
+    "Price": "249.60",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "392185.71",
+    "TotalInPortfolio": "392185.71",
+    "PercentReturn": "292.19"
+  },
+  {
+    "DateOfTrade": "2022-01-25T00:00:00.000Z",
+    "Price": "233.70",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "367202.71",
+    "TotalInPortfolio": "367202.71",
+    "PercentReturn": "267.20"
+  },
+  {
+    "DateOfTrade": "2022-02-23T00:00:00.000Z",
+    "Price": "184.90",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "290525.37",
+    "TotalInPortfolio": "290525.37",
+    "PercentReturn": "190.53"
+  },
+  {
+    "DateOfTrade": "2022-03-07T00:00:00.000Z",
+    "Price": "165.10",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "259414.51",
+    "TotalInPortfolio": "259414.51",
+    "PercentReturn": "159.41"
+  },
+  {
+    "DateOfTrade": "2022-03-14T00:00:00.000Z",
+    "Price": "133.30",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "209448.54",
+    "TotalInPortfolio": "209448.54",
+    "PercentReturn": "109.45"
+  },
+  {
+    "DateOfTrade": "2022-07-21T00:00:00.000Z",
+    "Price": "101.30",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "159.17"
+  },
+  {
+    "DateOfTrade": "2022-08-30T00:00:00.000Z",
+    "Price": "85.60",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "134499.58",
+    "TotalInPortfolio": "134499.58",
+    "PercentReturn": "34.50"
+  },
+  {
+    "DateOfTrade": "2022-09-23T00:00:00.000Z",
+    "Price": "63.30",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "99460.55",
+    "TotalInPortfolio": "99460.55",
+    "PercentReturn": "-0.54"
+  },
+  {
+    "DateOfTrade": "2022-10-11T00:00:00.000Z",
+    "Price": "49.60",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "77934.34",
+    "TotalInPortfolio": "77934.34",
+    "PercentReturn": "-22.07"
+  },
+  {
+    "DateOfTrade": "2022-11-02T00:00:00.000Z",
+    "Price": "39.92",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "62724.57",
+    "TotalInPortfolio": "62724.57",
+    "PercentReturn": "-37.28"
+  },
+  {
+    "DateOfTrade": "2022-11-03T00:00:00.000Z",
+    "Price": "38.07",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "59817.75",
+    "TotalInPortfolio": "59817.75",
+    "PercentReturn": "-40.18"
+  },
+  {
+    "DateOfTrade": "2022-12-27T00:00:00.000Z",
+    "Price": "39.76",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "62473.17",
+    "TotalInPortfolio": "62473.17",
+    "PercentReturn": "-37.53"
+  },
+  {
+    "DateOfTrade": "2023-01-23T00:00:00.000Z",
+    "Price": "63.58",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "99.90"
+  },
+  {
+    "DateOfTrade": "2023-01-26T00:00:00.000Z",
+    "Price": "67.41",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "105.92"
+  },
+  {
+    "DateOfTrade": "2023-01-27T00:00:00.000Z",
+    "Price": "72.92",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "114.58"
+  },
+  {
+    "DateOfTrade": "2023-02-01T00:00:00.000Z",
+    "Price": "78.21",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "122.89"
+  },
+  {
+    "DateOfTrade": "2023-02-02T00:00:00.000Z",
+    "Price": "94.45",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "148.41"
+  },
+  {
+    "DateOfTrade": "2023-03-16T00:00:00.000Z",
+    "Price": "87.01",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "136.72"
   },
   {
     "DateOfTrade": "2023-03-17T00:00:00.000Z",
-    "Price": "23.23",
-    "TradeType": "Buy",
-    "CashReserve": "80000.00",
-    "StockAmount": "871.59",
-    "MoneyInStock": "20247.02",
-    "TotalInPortfolio": "100247.02",
-    "PercentReturn": "0.25"
+    "Price": "84.62",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "132.96"
   },
   {
     "DateOfTrade": "2023-03-21T00:00:00.000Z",
-    "Price": "21.71",
-    "TradeType": "Buy",
-    "CashReserve": "70000.00",
-    "StockAmount": "1332.21",
-    "MoneyInStock": "28922.21",
-    "TotalInPortfolio": "98922.21",
-    "PercentReturn": "-1.08"
+    "Price": "90.33",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "141.93"
+  },
+  {
+    "DateOfTrade": "2023-03-23T00:00:00.000Z",
+    "Price": "92.86",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "145.91"
+  },
+  {
+    "DateOfTrade": "2023-03-31T00:00:00.000Z",
+    "Price": "103.46",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "162.56"
   },
   {
     "DateOfTrade": "2023-04-25T00:00:00.000Z",
-    "Price": "22.93",
-    "TradeType": "Sell",
-    "CashReserve": "60000.00",
-    "StockAmount": "1768.32",
-    "MoneyInStock": "0.00",
-    "TotalInPortfolio": "60000.00",
-    "PercentReturn": "100.55"
+    "Price": "81.77",
+    "TradeType": "Buy",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "128481.66",
+    "TotalInPortfolio": "128481.66",
+    "PercentReturn": "28.48"
   },
   {
     "DateOfTrade": "2023-05-08T00:00:00.000Z",
-    "Price": "17.58",
-    "TradeType": "Buy",
-    "CashReserve": "50000.00",
-    "StockAmount": "2337.14",
-    "MoneyInStock": "41087.01",
-    "TotalInPortfolio": "91087.01",
-    "PercentReturn": "-8.91"
+    "Price": "104.06",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "163.50"
   },
   {
     "DateOfTrade": "2023-05-10T00:00:00.000Z",
-    "Price": "16.71",
-    "TradeType": "Buy",
-    "CashReserve": "40000.00",
-    "StockAmount": "2935.59",
-    "MoneyInStock": "49053.69",
-    "TotalInPortfolio": "89053.69",
-    "PercentReturn": "-10.95"
+    "Price": "109.10",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "171.42"
   },
   {
     "DateOfTrade": "2023-05-11T00:00:00.000Z",
-    "Price": "16.25",
-    "TradeType": "Buy",
-    "CashReserve": "30000.00",
-    "StockAmount": "3550.97",
-    "MoneyInStock": "57703.32",
-    "TotalInPortfolio": "87703.32",
-    "PercentReturn": "-12.30"
+    "Price": "112.18",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "176.26"
+  },
+  {
+    "DateOfTrade": "2023-05-17T00:00:00.000Z",
+    "Price": "120.44",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "189.24"
   },
   {
     "DateOfTrade": "2023-05-18T00:00:00.000Z",
-    "Price": "13.49",
-    "TradeType": "Buy",
-    "CashReserve": "20000.00",
-    "StockAmount": "4292.26",
-    "MoneyInStock": "57902.63",
-    "TotalInPortfolio": "77902.63",
-    "PercentReturn": "-22.10"
+    "Price": "132.89",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "208.80"
+  },
+  {
+    "DateOfTrade": "2023-05-26T00:00:00.000Z",
+    "Price": "150.51",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "236.49"
+  },
+  {
+    "DateOfTrade": "2023-05-30T00:00:00.000Z",
+    "Price": "157.38",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "247.28"
   },
   {
     "DateOfTrade": "2023-07-13T00:00:00.000Z",
-    "Price": "7.97",
-    "TradeType": "Buy",
-    "CashReserve": "10000.00",
-    "StockAmount": "5546.97",
-    "MoneyInStock": "44209.34",
-    "TotalInPortfolio": "54209.34",
-    "PercentReturn": "-45.79"
+    "Price": "208.69",
+    "TradeType": "Sell",
+    "CashReserve": "0.00",
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "327.91"
   },
   {
     "DateOfTrade": "2023-07-17T00:00:00.000Z",
-    "Price": "7.77",
-    "TradeType": "Buy",
+    "Price": "213.66",
+    "TradeType": "Sell",
     "CashReserve": "0.00",
-    "StockAmount": "6833.97",
-    "MoneyInStock": "53099.95",
-    "TotalInPortfolio": "53099.95",
-    "PercentReturn": "-46.90"
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "335.71"
   },
   {
     "DateOfTrade": "2023-07-18T00:00:00.000Z",
-    "Price": "7.45",
-    "TradeType": "Buy",
+    "Price": "222.00",
+    "TradeType": "Sell",
     "CashReserve": "0.00",
-    "StockAmount": "6833.97",
-    "MoneyInStock": "50913.07",
-    "TotalInPortfolio": "50913.07",
-    "PercentReturn": "-49.09"
+    "StockAmount": "1571.26",
+    "MoneyInStock": "0.00",
+    "TotalInPortfolio": "0.00",
+    "PercentReturn": "348.82"
   }
 ]
