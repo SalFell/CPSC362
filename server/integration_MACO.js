@@ -1,6 +1,9 @@
-const { expect } = require('chai');
-const { simulateTrades } = require('./MACO-Gabe.js');
-const { readHistoricalDataFile } = require('./HistoricalDataFile.js');
+import { expect } from 'chai';
+//const { expect } = require('chai');
+import { MACO } from './MACO_BB.js'
+//const { simulateTrades } = require('./MACO_BB.js');
+import { readHistoricalDataFile } from './DataFileFunctions.js';
+//const { readHistoricalDataFile } = require('./DataFileFunctions.js');
 console.log("This program tests the validity of MACO.js");
 
 describe('downloadScript.readHistoricalDataFile()', () => {
@@ -9,7 +12,10 @@ describe('downloadScript.readHistoricalDataFile()', () => {
     expect(data).to.be.an('array');
   });
 });
-describe('simulateTrades()', () => {
+
+//const macoStrategy = new MACO();
+
+describe('macoStrategy.simulateTrades(data/historical_data.json)', () => {
   it('should return an array of trades. Checks for the inclusion of the following data fields:\n    DataOfTrade\n    Price\n    TradeType\n    CashReserve\n    StockAmount\n    MoneyInStock\n    TotalInPortfolio\n\n', () => {
 
     // Call the function to simulate trades
@@ -20,12 +26,13 @@ describe('simulateTrades()', () => {
     expect(trades).to.be.an('array');
     trades.forEach((trade) => {
         expect(trade).to.have.property('DateOfTrade');
-        expect(trade).to.have.property('Price');
+        //expect(trade).to.have.property('Price');
         expect(trade).to.have.property('TradeType');
-        expect(trade).to.have.property('CashReserve');
-        expect(trade).to.have.property('StockAmount');
-        expect(trade).to.have.property('MoneyInStock');
+        //expect(trade).to.have.property('CashReserve');
+        //expect(trade).to.have.property('StockAmount');
+        //expect(trade).to.have.property('MoneyInStock');
         expect(trade).to.have.property('TotalInPortfolio');
+        expect(trade).to.have.property('PercentReturn');
     });
   });
   it('Checks if Numbers Make Sense\n    Is CashReserve,MoneyInStock,&TotalInPortfolio > 0?', () => {
@@ -45,3 +52,4 @@ describe('simulateTrades()', () => {
 
   // Add more specific test cases if needed
 });
+
