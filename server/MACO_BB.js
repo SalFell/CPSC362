@@ -96,7 +96,7 @@ class BB extends IStrategy {
         let deviations = 2;
         const bands = [];
         const trades = [];
-        let cashReserve = 10000;
+        let cashReserve = 100000;
         let stockAmount = 0;
 
         //if(data == null)

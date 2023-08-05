@@ -3,99 +3,99 @@
     "DateOfTrade": "2023-03-16T00:00:00.000Z",
     "Price": "22.67",
     "TradeType": "Buy",
-    "CashReserve": "2.53",
-    "StockAmount": "441.00",
-    "MoneyInStock": "9997.47",
-    "TotalInPortfolio": "10000.00"
+    "CashReserve": "2.63",
+    "StockAmount": "4411.00",
+    "MoneyInStock": "99997.37",
+    "TotalInPortfolio": "100000.00"
   },
   {
     "DateOfTrade": "2023-03-17T00:00:00.000Z",
     "Price": "23.23",
     "TradeType": "Buy",
-    "CashReserve": "2.53",
-    "StockAmount": "441.00",
-    "MoneyInStock": "10244.43",
-    "TotalInPortfolio": "10246.96"
+    "CashReserve": "2.63",
+    "StockAmount": "4411.00",
+    "MoneyInStock": "102467.53",
+    "TotalInPortfolio": "102470.16"
   },
   {
     "DateOfTrade": "2023-03-21T00:00:00.000Z",
     "Price": "21.71",
     "TradeType": "Buy",
-    "CashReserve": "2.53",
-    "StockAmount": "441.00",
-    "MoneyInStock": "9574.11",
-    "TotalInPortfolio": "9576.64"
+    "CashReserve": "2.63",
+    "StockAmount": "4411.00",
+    "MoneyInStock": "95762.81",
+    "TotalInPortfolio": "95765.44"
   },
   {
     "DateOfTrade": "2023-04-25T00:00:00.000Z",
     "Price": "22.93",
     "TradeType": "Sell",
-    "CashReserve": "10114.66",
+    "CashReserve": "101146.86",
     "StockAmount": "0.00",
     "MoneyInStock": "0.00",
-    "TotalInPortfolio": "10114.66"
+    "TotalInPortfolio": "101146.86"
   },
   {
     "DateOfTrade": "2023-05-08T00:00:00.000Z",
     "Price": "17.58",
     "TradeType": "Buy",
-    "CashReserve": "6.16",
-    "StockAmount": "575.00",
-    "MoneyInStock": "10108.50",
-    "TotalInPortfolio": "10114.66"
+    "CashReserve": "9.12",
+    "StockAmount": "5753.00",
+    "MoneyInStock": "101137.74",
+    "TotalInPortfolio": "101146.86"
   },
   {
     "DateOfTrade": "2023-05-10T00:00:00.000Z",
     "Price": "16.71",
     "TradeType": "Buy",
-    "CashReserve": "6.16",
-    "StockAmount": "575.00",
-    "MoneyInStock": "9608.25",
-    "TotalInPortfolio": "9614.41"
+    "CashReserve": "9.12",
+    "StockAmount": "5753.00",
+    "MoneyInStock": "96132.62",
+    "TotalInPortfolio": "96141.75"
   },
   {
     "DateOfTrade": "2023-05-11T00:00:00.000Z",
     "Price": "16.25",
     "TradeType": "Buy",
-    "CashReserve": "6.16",
-    "StockAmount": "575.00",
-    "MoneyInStock": "9343.75",
-    "TotalInPortfolio": "9349.91"
+    "CashReserve": "9.12",
+    "StockAmount": "5753.00",
+    "MoneyInStock": "93486.25",
+    "TotalInPortfolio": "93495.37"
   },
   {
     "DateOfTrade": "2023-05-18T00:00:00.000Z",
     "Price": "13.49",
     "TradeType": "Buy",
-    "CashReserve": "6.16",
-    "StockAmount": "575.00",
-    "MoneyInStock": "7756.75",
-    "TotalInPortfolio": "7762.91"
+    "CashReserve": "9.12",
+    "StockAmount": "5753.00",
+    "MoneyInStock": "77607.97",
+    "TotalInPortfolio": "77617.09"
   },
   {
     "DateOfTrade": "2023-07-13T00:00:00.000Z",
     "Price": "7.97",
     "TradeType": "Buy",
-    "CashReserve": "6.16",
-    "StockAmount": "575.00",
-    "MoneyInStock": "4582.75",
-    "TotalInPortfolio": "4588.91"
+    "CashReserve": "1.15",
+    "StockAmount": "5754.00",
+    "MoneyInStock": "45859.38",
+    "TotalInPortfolio": "45860.53"
   },
   {
     "DateOfTrade": "2023-07-17T00:00:00.000Z",
     "Price": "7.77",
     "TradeType": "Buy",
-    "CashReserve": "6.16",
-    "StockAmount": "575.00",
-    "MoneyInStock": "4467.75",
-    "TotalInPortfolio": "4473.91"
+    "CashReserve": "1.15",
+    "StockAmount": "5754.00",
+    "MoneyInStock": "44708.58",
+    "TotalInPortfolio": "44709.73"
   },
   {
     "DateOfTrade": "2023-07-18T00:00:00.000Z",
     "Price": "7.45",
     "TradeType": "Buy",
-    "CashReserve": "6.16",
-    "StockAmount": "575.00",
-    "MoneyInStock": "4283.75",
-    "TotalInPortfolio": "4289.91"
+    "CashReserve": "1.15",
+    "StockAmount": "5754.00",
+    "MoneyInStock": "42867.30",
+    "TotalInPortfolio": "42868.45"
   }
 ]
