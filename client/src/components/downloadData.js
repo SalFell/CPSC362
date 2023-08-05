@@ -85,10 +85,10 @@ const DataDownloadForm = () => {
       <div id="priceChart-container">
         <canvas id="priceChart"></canvas>
       </div>
-
-      <h2>Moving Average Results</h2>
+      
       {showTable && MACOtrades.length > 0 && (
         <div className="MACO-trades-container">
+          <h2>Moving Average Results</h2>
           <table className="MACO-trades-table">
             <thead>
               <tr>
@@ -111,10 +111,10 @@ const DataDownloadForm = () => {
           </table>
         </div>
       )}
-
-      <h2>Bollinger Bands Results</h2>
+      
       {showTable && BBtrades.length > 0 && (
         <div className="BB-trades-container">
+          <h2>Bollinger Bands Results</h2>
           <table className="BB-trades-table">
             <thead>
               <tr>
@@ -137,10 +137,10 @@ const DataDownloadForm = () => {
           </table>
         </div>
       )}
-
-      <h2>Historical Data</h2>
+      
       {showTable && historicalData.length > 0 && (
         <div className="history-container">
+          <h2>Historical Data</h2>
           <table className="history-table">
             <thead>
               <tr>

@@ -2,48 +2,21 @@
 
 ETF trading strategy analyzer based on Yahoo Finance data.
 
-Built with Node.js and React
+Built with Node.js/Express for the back-end and React for the front-end.
 
-MVC architecture
+Designed using MVC architecture.
 
-project-root/
-|-- server/ (Node.js back-end)
-| |-- data/
-| | |-- historical_data.json (downloaded historical data)
-| |-- controllers/
-| | |-- dataController.js (Controller for handling data-related actions)
-| |-- models/
-| | |-- BullingerBands.js (Model for Bullinger Bands trading strategy)
-| | |-- MovingAverage.js (Model for Moving Average trading strategy)
-| |-- routes/
-| | |-- dataRoutes.js (Express routes for handling data requests)
-| |-- tests/
-| | |-- unit_MACO.js (unit test for moving average strategy)
-| |-- utils/
-| | |-- processData.js (utility for processing historical data)
-| |-- index.js (entry point to Node.js server)
-| |-- proxy.js (endpoint to proxy the Yahoo Finance API request)
-| |-- setup.js (allows proxy to write files)
-|
-|-- client/ (React front-end)
-| |-- src/
-| | |-- components/
-| | | |-- DataDownloadForm.js (View component for data download form)
-| | | |-- BackTestResults.js (View component for displaying back-test results)
-| | | |-- Chart.js (View component for displaying the chart)
-| | |-- App.css
-| | |-- App.js
-| | |-- App.test.js
-| | |-- index.css
-| | |-- index.js
-| | |-- reportWebVitals.js
-| | |-- setupTests.js
-| |-- public/
-| | |-- index.html
-| | |-- manifest.json
-| | |-- robots.txt
-| |-- ... (other client-related files)
-|
-|-- data.json
-|-- package.json
-|-- ... (other project configuration files)
+## Features
+1. Ability to download the historical data of FNGU and FNGD for the past three years between
+01/01/2020 and Yesterday from Yahoo Finance and save them in JSON format on a server. The downloaded data includes Date, Open, High, Low, Close, and Volume.
+2. User interface (GUI) for that displays the data from the saved data and draws a graph for the selected symbol (either FNGU or FNGD) and date period.
+3. Implements two trading strategies (a) Moving Average Cross-over and (b) Bollinger
+Band Bounce.
+4. The initial balance of the trading account will be $ $100,000$. Implements a simple backtesting method to calculate the total gain or loss from every trade for the selected period and displays
+the final performance of each trading strategy in terms of total $ return and % return,
+assuming the trading fee is zero (free).
+
+## Credits
+
+Mike Ball | Salvador Felipe | Christian Mendez | Gilberto Espino Solis | Nick Viste
+
