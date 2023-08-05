@@ -112,7 +112,7 @@ const DataDownloadForm = () => {
             <tbody>
               {MACOtrades.map((trade, index) => (
                 <tr key={index}>
-                  <td>{trade.DateOfTrade}</td>
+                  <td>{trade.DateOfTrade.split('T')[0]}</td>
                   <td>{trade.TradeType}</td>
                   <td>{trade.TotalInPortfolio}</td>
                   <td>{trade.PercentReturn}</td>
@@ -138,7 +138,7 @@ const DataDownloadForm = () => {
             <tbody>
               {BBtrades.map((trade, index) => (
                 <tr key={index}>
-                  <td>{trade.DateOfTrade}</td>
+                  <td>{trade.DateOfTrade.split('T')[0]}</td>
                   <td>{trade.TradeType}</td>
                   <td>{trade.TotalInPortfolio}</td>
                   <td>{trade.PercentReturn}</td>
