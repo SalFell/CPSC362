@@ -35,7 +35,7 @@ describe('macoStrategy.simulateTrades(../data/historical_data.json)', () => {
         expect(trade).to.have.property('PercentReturn');
     });
   });
-  it('Checks if Numbers Make Sense\n    Is CashReserve,MoneyInStock,&TotalInPortfolio > 0?', () => {
+  it('Checks if Numbers Make Sense\n    Is CashReserve,MoneyInStock,&TotalInPortfolio > 0? Are they around where they should be?', () => {
 
     // Call the function to simulate trades
     const data = readHistoricalDataFile('data/historical_data.json');
