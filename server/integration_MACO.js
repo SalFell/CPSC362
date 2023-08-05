@@ -15,11 +15,11 @@ describe('downloadScript.readHistoricalDataFile()', () => {
 
 //const macoStrategy = new MACO();
 
-describe('macoStrategy.simulateTrades(data/historical_data.json)', () => {
+describe('macoStrategy.simulateTrades(../data/historical_data.json)', () => {
   it('should return an array of trades. Checks for the inclusion of the following data fields:\n    DataOfTrade\n    Price\n    TradeType\n    CashReserve\n    StockAmount\n    MoneyInStock\n    TotalInPortfolio\n\n', () => {
 
     // Call the function to simulate trades
-    const data = readHistoricalDataFile('data/historical_data.json');
+    const data = readHistoricalDataFile('../data/historical_data.json');
     const trades = simulateTrades(data);
 
     // Assertions
