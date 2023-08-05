@@ -7,6 +7,8 @@
 /* General Styles */
 html {
   color:white;
+
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 body {
@@ -35,7 +37,6 @@ body {
 
   position: fixed;
   right: 5%;
-
   margin-top: 0%;
 
   animation: fadeIn var(--fadeTime);
@@ -59,6 +60,8 @@ body {
   margin-left: .75%;
   margin-right: .75%;
   vertical-align: middle;
+
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #priceChart-container  {
@@ -69,7 +72,9 @@ body {
 
 }
 
-.table-container {
+.tableContainer {
+
+  display: inline-block;
   font-size: 20px;
   table-layout: fixed;
   margin-top: 2%;
@@ -78,9 +83,29 @@ body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+#macoTable {
+  margin-left: 0%;
+  margin-right: 10%;
+}
+
+#bbTable {
+  margin-left: auto;
+  margin-right: 0%;
+}
+
+#historicalTable {
+  display: block;
+  text-align: left;
+}
+
+.tableData {
+  text-align: left
+}
+
+
 th, td{
-  width: 12%; 
-  text-align: center;
+  width: 150px;
+  text-align: left;
 }
 
 /* Button Styles */

@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { generateGraph } from './chartScript.js';
 
+const minDate = "2020-01-01"
+
 const DataDownloadForm = () => {
   const [historicalData, setHistoricalData] = useState([]);
   const [MACOtrades, setMACOTrades] = useState([]);
@@ -56,11 +58,8 @@ const DataDownloadForm = () => {
   // Function to get the maximum allowed date (previous day)
   // Form dates already have validation to prevent future dates but this is an extra precaution. 
   // Data from the future won't be downloaded anyways, but just in case.
-  async function getMaxEndDate() {
-    const today = new Date();
-    today.setDate(today.getDate() - 1);
-    return today.toISOString().split('T')[0];
-  }
+  var maxDate = new Date(new Date().setDate(new Date().getDate() - 1));
+  maxDate = maxDate.toISOString().split('T')[0];
 
   return (
     <div className="data-download-form" data-testid="data-download-form">
@@ -75,8 +74,8 @@ const DataDownloadForm = () => {
         <input
           type="date"
           id="startDate"
-          min="2020-01-01"
-          max={getMaxEndDate()}
+          min={minDate}
+          max={maxDate}
           value={startDate}
           onChange={(e) => setStartDate(e.target.value)}
           required
@@ -85,8 +84,8 @@ const DataDownloadForm = () => {
         <input
           type="date"
           id="endDate"
-          min="2020-01-31"
-          max={getMaxEndDate()}
+          min={minDate}
+          max={maxDate}
           value={endDate}
           onChange={(e) => setEndDate(e.target.value)}
           required
@@ -99,9 +98,9 @@ const DataDownloadForm = () => {
       </div>
       
       {showTable && MACOtrades.length > 0 && (
-        <div className="MACO-trades-container">
+        <div className="tableContainer" id="macoTable">
           <h2>Moving Average Cross-over Results</h2>
-          <table className="MACO-trades-table">
+          <table className="tableData">
             <thead>
               <tr>
                 <th>Date of Trade</th>
@@ -125,9 +124,9 @@ const DataDownloadForm = () => {
       )}
       
       {showTable && BBtrades.length > 0 && (
-        <div className="BB-trades-container">
+        <div className="tableContainer" id="bbTable">
           <h2>Bollinger Bands Results</h2>
-          <table className="BB-trades-table">
+          <table className="tableData">
             <thead>
               <tr>
                 <th>Date of Trade</th>
@@ -151,9 +150,9 @@ const DataDownloadForm = () => {
       )}
       
       {showTable && historicalData.length > 0 && (
-        <div className="history-container">
+        <div className="tableContainer" id="historicalTable">
           <h2>Historical Data</h2>
-          <table className="history-table">
+          <table className="tableData">
             <thead>
               <tr>
                 <th>Date</th>
