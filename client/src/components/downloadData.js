@@ -6,6 +6,8 @@ import { generateGraph } from './chartScript.js';
 
 const DataDownloadForm = () => {
   const [historicalData, setHistoricalData] = useState([]);
+  const [MACOtrades, setMACOTrades] = useState([]);
+  const [BBtrades, setBBTrades] = useState([]);
   const [showTable, setShowTable] = useState(false);
   const [symbol, setSymbol] = useState('');
   const [startDate, setStartDate] = useState('');
@@ -15,7 +17,8 @@ const DataDownloadForm = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.get(`http://localhost:3000/yahoo-finance/${symbol}`, {
+      // Download data from Yahoo Finance API
+      const historicalResponse = await axios.get(`http://localhost:3000/yahoo-finance/${symbol}`, {
         params: {
           period1: new Date(startDate).getTime() / 1000,
           period2: new Date(endDate).getTime() / 1000,
@@ -24,19 +27,28 @@ const DataDownloadForm = () => {
           includeAdjustedClose: true,
         },
       });
+      const yfData = historicalResponse.data;
 
-      const data = response.data;
+      // Fetch MACO strategy results from the server
+      const MACOtradesResponse = await axios.get('http://localhost:3001/yahoo-finance/' + symbol + '/MACO-strategy-results');
+      const MACOtradesData = MACOtradesResponse.data;
 
-      if (data.length > 0) {
+      // Fetch BB strategy results from the server
+      const BBtradesResponse = await axios.get('http://localhost:3001/yahoo-finance/' + symbol + '/BB-strategy-results');
+      const BBtradesData = BBtradesResponse.data;
+
+      if (yfData.length > 0) {
         window.alert('Data downloaded successfully.');
-        setHistoricalData(data);
+        setHistoricalData(yfData);
+        setMACOTrades(MACOtradesData);
+        setBBTrades(BBtradesData);
         setShowTable(true);
-        generateGraph(data);
+        generateGraph(yfData);
       } else {
         window.alert('No data received from Yahoo Finance API.');
       }
     } catch (error) {
-      console.error('Error occurred while downloading data:' + error.message + symbol + startDate + endDate);
+      console.error('Error occurred while downloading data: ' + error.message + ' ' + symbol + ' ' + startDate + ' ' + endDate);
       window.alert('Error occurred during data download. Please try again.');
     }
   };
@@ -69,14 +81,67 @@ const DataDownloadForm = () => {
         />
         <button id="submitButton" type="submit">Download</button>
       </form>
-
+      
       <div id="priceChart-container">
         <canvas id="priceChart"></canvas>
       </div>
 
+      <h2>Moving Average Results</h2>
+      {showTable && MACOtrades.length > 0 && (
+        <div className="MACO-trades-container">
+          <table className="MACO-trades-table">
+            <thead>
+              <tr>
+                <th>Date of Trade</th>
+                <th>Trade Type</th>
+                <th>Total In Portfolio</th>
+                <th>Percent Return</th>
+              </tr>
+            </thead>
+            <tbody>
+              {MACOtrades.map((trade, index) => (
+                <tr key={index}>
+                  <td>{trade.DateOfTrade}</td>
+                  <td>{trade.TradeType}</td>
+                  <td>{trade.TotalInPortfolio}</td>
+                  <td>{trade.PercentReturn}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      <h2>Bollinger Bands Results</h2>
+      {showTable && BBtrades.length > 0 && (
+        <div className="BB-trades-container">
+          <table className="BB-trades-table">
+            <thead>
+              <tr>
+                <th>Date of Trade</th>
+                <th>Trade Type</th>
+                <th>Total In Portfolio</th>
+                <th>Percent Return</th>
+              </tr>
+            </thead>
+            <tbody>
+              {BBtrades.map((trade, index) => (
+                <tr key={index}>
+                  <td>{trade.DateOfTrade}</td>
+                  <td>{trade.TradeType}</td>
+                  <td>{trade.TotalInPortfolio}</td>
+                  <td>{trade.PercentReturn}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      <h2>Historical Data</h2>
       {showTable && historicalData.length > 0 && (
-        <div className="table-container">
-          <table className="data-table">
+        <div className="history-container">
+          <table className="history-table">
             <thead>
               <tr>
                 <th>Date</th>

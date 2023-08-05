@@ -1,20 +1,63 @@
 import fs from 'fs';
 
+let writeInProgress = false;
+
 // Function to read the JSON file and parse its content
-const readHistoricalDataFile = function() {
-  const data = fs.readFileSync('data/historical_data.json');
+const readHistoricalDataFile = function () {
+  const data = fs.readFileSync('./model/data/historical_data.json');
   return JSON.parse(data);
 };
-export { readHistoricalDataFile };
 
-const writeTradeDataFile = function(data, filename) {
-  fs.writeFile("data/"+filename+".json", JSON.stringify(data,null,2), function(err) { //writeFile requires a callback function (error handling) because it is asynchronous
-    if (err) {
-      console.error('Error writing to file:', err);
+const writeTradeDataFile = (data, filename) => {
+  if (writeInProgress) {
+    return Promise.reject('Write operation in progress. Try again later.');
+  }
+
+  writeInProgress = true;
+
+  return new Promise((resolve, reject) => {
+    fs.writeFile("../server/model/data/" + filename + ".json", JSON.stringify(data, null, 2), function (err) {
+      writeInProgress = false;
+
+      if (err) {
+        console.error('Error writing to file:', err);
+        reject(err);
+      } else {
+        console.log('File ' + filename + '.json has been saved successfully.');
+        resolve();
+      }
+    });
+  });
+};
+
+const readMACOResultsFile = () => {
+  if (writeInProgress) {
+    return Promise.reject('Write operation in progress. Try again later.');
+  }
+
+  return new Promise((resolve, reject) => {
+    const data = fs.readFileSync('./model/data/MACO.json');
+    if (data) {
+      resolve(JSON.parse(data));
     } else {
-      console.log('File "MACO.json" has been saved successfully.');
+      reject('Error reading MACO results file');
     }
   });
-}
-export { writeTradeDataFile };
+};
 
+const readBBResultsFile = () => {
+  if (writeInProgress) {
+    return Promise.reject('Write operation in progress. Try again later.');
+  }
+
+  return new Promise((resolve, reject) => {
+    const data = fs.readFileSync('./model/data/BB.json');
+    if (data) {
+      resolve(JSON.parse(data));
+    } else {
+      reject('Error reading BB results file');
+    }
+  });
+};
+
+export { readHistoricalDataFile, writeTradeDataFile, readMACOResultsFile, readBBResultsFile };

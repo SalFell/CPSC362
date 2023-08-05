@@ -1,9 +1,9 @@
-const stratsMain = require('./model/stratsMain.js');
-const processData = require('./model/processData.js');
-const express = require('express');
-const axios = require('axios');
-const fs = require('fs');
-const cors = require('cors');
+import stratsMain from './model/stratsMain.js';
+import processData from './model/processData.js';
+import express, { json } from 'express';
+import { get } from 'axios';
+import { writeFileSync } from 'fs';
+import cors from 'cors';
 
 const app = express();
 const port = 3001; // You can choose any available port number
@@ -18,7 +18,7 @@ res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Ty
 next();
 })
 
-app.use(express.json());
+app.use(json());
 
 // Endpoint to proxy the Yahoo Finance API request
 app.get('/yahoo-finance/:symbol', async (req, res) => {
@@ -26,7 +26,7 @@ app.get('/yahoo-finance/:symbol', async (req, res) => {
   const { period1, period2, interval, events, includeAdjustedClose } = req.query;
 
   try {
-    const response = await axios.get(
+    const response = await get(
       `http://query1.finance.yahoo.com/v7/finance/chart/${symbol}?period1=${period1}&period2=${period2}&interval=${interval}&events=${events}&includeAdjustedClose=${includeAdjustedClose}`
     );
     const data = response.data;
@@ -34,14 +34,15 @@ app.get('/yahoo-finance/:symbol', async (req, res) => {
 
     if (historicalData.length > 0) {
       // Save data to the server
-      const fileName = `./data/historical_data.json`;
-      fs.writeFileSync(fileName, JSON.stringify(historicalData, null, 2), 'utf8');
+      const fileName = `./model/data/historical_data.json`;
+      writeFileSync(fileName, JSON.stringify(historicalData, null, 2), 'utf8');
 
       // Trading strategies
-      stratsMain();
+      const trades = stratsMain();
       console.log(`Data for ${symbol} downloaded successfully to ${fileName}`);
 
       res.json(historicalData);
+      res.json(trades);
     } else {
       res.status(404).json({ error: 'No data received from Yahoo Finance API.' });
     }

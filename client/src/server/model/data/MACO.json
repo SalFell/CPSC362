@@ -1,0 +1,92 @@
+[
+  {
+    "DateOfTrade": "2023-02-21T00:00:00.000Z",
+    "TradeType": "Buy",
+    "TotalInPortfolio": "100277.11",
+    "PercentReturn": "0.28"
+  },
+  {
+    "DateOfTrade": "2023-02-23T00:00:00.000Z",
+    "TradeType": "Sell",
+    "TotalInPortfolio": "94155.15",
+    "PercentReturn": "94.16"
+  },
+  {
+    "DateOfTrade": "2023-02-24T00:00:00.000Z",
+    "TradeType": "Buy",
+    "TotalInPortfolio": "99198.96",
+    "PercentReturn": "-0.80"
+  },
+  {
+    "DateOfTrade": "2023-03-14T00:00:00.000Z",
+    "TradeType": "Sell",
+    "TotalInPortfolio": "89646.21",
+    "PercentReturn": "89.65"
+  },
+  {
+    "DateOfTrade": "2023-04-12T00:00:00.000Z",
+    "TradeType": "Buy",
+    "TotalInPortfolio": "74423.73",
+    "PercentReturn": "-25.58"
+  },
+  {
+    "DateOfTrade": "2023-04-13T00:00:00.000Z",
+    "TradeType": "Sell",
+    "TotalInPortfolio": "69015.54",
+    "PercentReturn": "69.02"
+  },
+  {
+    "DateOfTrade": "2023-04-20T00:00:00.000Z",
+    "TradeType": "Buy",
+    "TotalInPortfolio": "73073.22",
+    "PercentReturn": "-26.93"
+  },
+  {
+    "DateOfTrade": "2023-04-27T00:00:00.000Z",
+    "TradeType": "Sell",
+    "TotalInPortfolio": "66367.36",
+    "PercentReturn": "66.37"
+  },
+  {
+    "DateOfTrade": "2023-06-26T00:00:00.000Z",
+    "TradeType": "Buy",
+    "TotalInPortfolio": "39857.08",
+    "PercentReturn": "-60.14"
+  },
+  {
+    "DateOfTrade": "2023-06-27T00:00:00.000Z",
+    "TradeType": "Sell",
+    "TotalInPortfolio": "37348.87",
+    "PercentReturn": "37.35"
+  },
+  {
+    "DateOfTrade": "2023-07-21T00:00:00.000Z",
+    "TradeType": "Buy",
+    "TotalInPortfolio": "35167.85",
+    "PercentReturn": "-64.83"
+  },
+  {
+    "DateOfTrade": "2023-07-24T00:00:00.000Z",
+    "TradeType": "Sell",
+    "TotalInPortfolio": "34927.25",
+    "PercentReturn": "34.93"
+  },
+  {
+    "DateOfTrade": "2023-07-26T00:00:00.000Z",
+    "TradeType": "Buy",
+    "TotalInPortfolio": "34669.67",
+    "PercentReturn": "-65.33"
+  },
+  {
+    "DateOfTrade": "2023-07-28T00:00:00.000Z",
+    "TradeType": "Sell",
+    "TotalInPortfolio": "32055.37",
+    "PercentReturn": "32.06"
+  },
+  {
+    "DateOfTrade": "2023-08-02T00:00:00.000Z",
+    "TradeType": "Buy",
+    "TotalInPortfolio": "34158.52",
+    "PercentReturn": "-65.84"
+  }
+]

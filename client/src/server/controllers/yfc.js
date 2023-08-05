@@ -1,5 +1,8 @@
+// Yahoo Finance Controller
+
 import axios from 'axios';
 import processData from '../utils/processData.js';
+import { writeFileSync } from 'fs';
 
 // Proxy Yahoo Finance API request
 const proxyYahooFinance = async (req, res) => {
@@ -20,14 +23,23 @@ const proxyYahooFinance = async (req, res) => {
       }
     );
 
-    const data = response.data;
-    const historicalData = processData(data);
+    const historicalData = processData(response.data);
 
-    res.json(historicalData);
+    if (historicalData.length > 0) {
+      // Save data to the server
+      const fileName = `./model/data/historical_data.json`;
+      writeFileSync(fileName, JSON.stringify(historicalData, null, 2), 'utf8');
+
+      console.log(`Data for ${symbol} downloaded successfully to ${fileName}`);
+
+      res.json(historicalData);
+    } else {
+      res.status(404).json({ error: 'No data received from Yahoo Finance API.' });
+    }
   } catch (error) {
     console.error('Error occurred while downloading data:', error.message);
     res.status(500).json({ error: 'Error occurred during data download. Please try again.' });
   }
 };
 
-export default proxyYahooFinance;
+export { proxyYahooFinance };
