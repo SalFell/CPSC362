@@ -13,7 +13,7 @@ const writeTradeDataFile = function(data, filename) {
     if (err) {
       console.error('Error writing to file:', err);
     } else {
-      console.log('File "MACO.json" has been saved successfully.');
+      console.log('File "'+filename+'.json" has been saved successfully.');
     }
   });
   //fs.writeFile('data/'+filename+'_trades.json', JSON.stringify(data));
