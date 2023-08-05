@@ -1,7 +1,7 @@
 // client/src/App.js
 
 import React from 'react';
-import DataDownloadForm from './View/downloadData.js';
+import DataDownloadForm from './components/downloadData.js';
 
 const App = () => {
   return (
