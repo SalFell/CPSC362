@@ -2,6 +2,7 @@
 // Part of Model in MVC
 // Part of Decorator design pattern
 // Decorator class to add extra data to trade data
+// Isn't actually used in the project, but is a good example of how to implement the Decorator design pattern
 
 import { readHistoricalDataFile } from "../utils/dataFileFunctions.js";
 import { writeTradeDataFile } from "../utils/dataFileFunctions.js";
