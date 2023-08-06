@@ -1,4 +1,5 @@
-// Yahoo Finance Controller
+// Yahoo Finance Controller (yfc.js)
+// Part of Controller in MVC
 
 import axios from 'axios';
 import processData from '../utils/processData.js';

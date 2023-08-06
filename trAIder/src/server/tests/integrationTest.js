@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { MACO, Context } from '../model/stratsClass.js';
+import { MACO } from '../model/stratsClass.js';
 import { readHistoricalDataFile } from '../utils/dataFileFunctions.js';
 console.log("This program tests the validity of MACO.js");
 

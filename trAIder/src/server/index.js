@@ -1,4 +1,5 @@
 // server/index.js
+// Server access point
 
 // Imports
 import express from 'express';
@@ -38,4 +39,3 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
-

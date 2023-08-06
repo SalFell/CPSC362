@@ -1,3 +1,6 @@
+// dataRoutes.js
+// Part of Controller in MVC
+
 import express from 'express';
 import { proxyYahooFinance } from '../controllers/yfc.js';
 import { getMACOResults, getBBResults } from '../controllers/stratsController.js';

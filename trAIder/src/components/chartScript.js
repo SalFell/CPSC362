@@ -1,6 +1,7 @@
-// chartUtils.js
+// chartScript.js
+// Part of View in MVC
 
-import Chart from 'chart.js/auto';
+import Chart from 'chart.js/dist/chart.js';
 
 export function generateGraph(historicalData) {
   const dates = historicalData.map((item) => item.Date);

@@ -1,4 +1,5 @@
-// src/DataDownloadForm.js
+// downloadData.js
+// Part of View in MVC
 
 import React, { useState } from 'react';
 import axios from 'axios';

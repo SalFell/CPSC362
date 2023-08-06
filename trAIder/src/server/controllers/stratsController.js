@@ -1,5 +1,8 @@
+// strategiesController.js
+// Desc: Controller for trading strategy results
+// Part of Controller in MVC
+
 import { readMACOResultsFile, readBBResultsFile } from '../utils/dataFileFunctions.js';
-//import { MACO, BB, Context } from '../model/stratsClass.js';
 import { writeTradeDataFile } from '../utils/dataFileFunctions.js';
 import { Adapter } from '../model/Adapter.js';
 

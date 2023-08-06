@@ -4,8 +4,18 @@ let writeInProgress = false;
 
 // Function to read the JSON file and parse its content
 const readHistoricalDataFile = function () {
-  const data = fs.readFileSync('./model/data/historical_data.json');
-  return JSON.parse(data);
+  try {
+    const data = fs.readFileSync('./model/data/historical_data.json');
+    return JSON.parse(data);
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      const data = fs.readFileSync('../model/data/historical_data.json');
+      return JSON.parse(data);
+    } else {
+      console.error('Error reading historical data file:', error);
+      return [];
+    }
+  }
 };
 
 const writeTradeDataFile = (data, filename) => {
