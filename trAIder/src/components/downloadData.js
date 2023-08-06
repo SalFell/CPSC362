@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { generateGraph } from './chartScript.js';
+import { withBorder, withBackgroundColor } from '../decorators.js';
 
 const minDate = "2020-01-01"
 
@@ -182,5 +183,9 @@ const DataDownloadForm = () => {
     </div>
   );
 };
+
+// Apply the decorators to the DataDownloadForm component
+withBorder(DataDownloadForm);
+withBackgroundColor(DataDownloadForm);
 
 export default DataDownloadForm;
