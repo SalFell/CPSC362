@@ -8,9 +8,9 @@ Designed using MVC architecture.
 
 ## How to run
 1. Open a terminal
-2. Move into client/src/server and run 'npm start' to start the Nodejs/Express server.
+2. Move into trAIder/src/server and run 'npm i' then 'npm start' to start the Nodejs/Express server.
 3. Open a second terminal
-4. Move into client/ and run 'npm start' to start the client. A browser tab will be automatically created.
+4. Move into trAIDer/ and run 'npm i' then 'npm start' to start the client. A browser tab will be automatically created.
 
 ## Features
 1. Ability to download the historical data of FNGU and FNGD for the past three years between
@@ -25,4 +25,3 @@ assuming the trading fee is zero (free).
 ## Credits
 
 Mike Ball | Salvador Felipe | Christian Mendez | Gilberto Espino Solis | Nick Viste
-

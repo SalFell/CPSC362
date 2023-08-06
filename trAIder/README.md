@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# trAIder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ETF trading strategy analyzer based on Yahoo Finance data.
 
-## Available Scripts
+Built with Node.js/Express for the back-end and React for the front-end.
 
-In the project directory, you can run:
+Designed using MVC architecture.
 
-### `npm start`
+## How to run
+1. Open a terminal
+2. Move into trAIder/src/server and run 'npm i' then 'npm start' to start the Nodejs/Express server.
+3. Open a second terminal
+4. Move into trAIDer/ and run 'npm i' then 'npm start' to start the client. A browser tab will be automatically created.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+1. Ability to download the historical data of FNGU and FNGD for the past three years between
+01/01/2020 and Yesterday from Yahoo Finance and save them in JSON format on a server. The downloaded data includes Date, Open, High, Low, Close, and Volume.
+2. User interface (GUI) for that displays the data from the saved data and draws a graph for the selected symbol (either FNGU or FNGD) and date period.
+3. Implements two trading strategies (a) Moving Average Cross-over and (b) Bollinger
+Band Bounce.
+4. The initial balance of the trading account will be $ $100,000$. Implements a simple backtesting method to calculate the total gain or loss from every trade for the selected period and displays
+the final performance of each trading strategy in terms of total $ return and % return,
+assuming the trading fee is zero (free).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Credits
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Mike Ball | Salvador Felipe | Christian Mendez | Gilberto Espino Solis | Nick Viste
