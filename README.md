@@ -25,3 +25,5 @@ assuming the trading fee is zero (free).
 ## Credits
 
 Mike Ball | Salvador Felipe | Christian Mendez | Gilberto Espino Solis | Nick Viste
+
+Everyone contributed equally

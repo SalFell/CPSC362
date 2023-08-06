@@ -2,31 +2,31 @@
   {
     "DateOfTrade": "2023-07-07T00:00:00.000Z",
     "TradeType": "Sell",
-    "TotalInPortfolio": "95438.22",
-    "PercentReturn": "-4.56%"
+    "TotalInPortfolio": "102680.41",
+    "PercentReturn": "2.68%"
   },
   {
     "DateOfTrade": "2023-07-12T00:00:00.000Z",
     "TradeType": "Buy",
-    "TotalInPortfolio": "92669.08",
-    "PercentReturn": "-7.33%"
+    "TotalInPortfolio": "99645.43",
+    "PercentReturn": "-0.35%"
   },
   {
     "DateOfTrade": "2023-07-20T00:00:00.000Z",
     "TradeType": "Sell",
-    "TotalInPortfolio": "91523.55",
-    "PercentReturn": "-8.48%"
+    "TotalInPortfolio": "98403.23",
+    "PercentReturn": "-1.60%"
   },
   {
     "DateOfTrade": "2023-07-28T00:00:00.000Z",
     "TradeType": "Buy",
-    "TotalInPortfolio": "86749.73",
-    "PercentReturn": "-13.25%"
+    "TotalInPortfolio": "93170.23",
+    "PercentReturn": "-6.83%"
   },
   {
     "DateOfTrade": "2023-08-02T00:00:00.000Z",
     "TradeType": "Sell",
-    "TotalInPortfolio": "94068.39",
-    "PercentReturn": "-5.93%"
+    "TotalInPortfolio": "101101.14",
+    "PercentReturn": "1.10%"
   }
 ]
