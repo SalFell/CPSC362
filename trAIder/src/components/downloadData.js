@@ -56,7 +56,7 @@ const DataDownloadForm = () => {
   };
 
   // Function to get the maximum allowed date (previous day)
-  // Form dates already have validation to prevent future dates but this is an extra precaution. 
+  // Form dates already have validation to prevent future dates but this is an extra precaution.
   // Data from the future won't be downloaded anyways, but just in case.
   var maxDate = new Date(new Date().setDate(new Date().getDate() - 1));
   maxDate = maxDate.toISOString().split('T')[0];
@@ -92,11 +92,11 @@ const DataDownloadForm = () => {
         />
         <button id="submitButton" type="submit">Download</button>
       </form>
-      
+
       <div id="priceChart-container">
         <canvas id="priceChart"></canvas>
       </div>
-      
+
       {showTable && MACOtrades.length > 0 && (
         <div className="tableContainer" id="macoTable">
           <h2>Moving Average Cross-over Results</h2>
@@ -122,7 +122,7 @@ const DataDownloadForm = () => {
           </table>
         </div>
       )}
-      
+
       {showTable && BBtrades.length > 0 && (
         <div className="tableContainer" id="bbTable">
           <h2>Bollinger Bands Results</h2>
@@ -148,7 +148,7 @@ const DataDownloadForm = () => {
           </table>
         </div>
       )}
-      
+
       {showTable && historicalData.length > 0 && (
         <div className="tableContainer" id="historicalTable">
           <h2>Historical Data</h2>
